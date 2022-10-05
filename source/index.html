@@ -15,26 +15,215 @@
       docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
     </script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Montserrat:wght@200;700&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet" />
+
     <!-- Favicon -->
+    <link rel="stylesheet" href="favicon.ico">
 
     <!-- build:css -->
     <link href="css/style.min.css" rel="stylesheet">
     <!-- endbuild -->
   </head>
   <body>
-    <div class="wrapper">
-      <main class="content">
-        <div class="coming-soon">
-          <h1 class="coming-soon__title">
-            <span>A</span>
-            <span>T</span>
-            <span>X</span>
-          </h1>
+    @@include('blocks/header.html')
+    <main>
+      <section class="banner">
+        <div class="container">
+          <div class="banner__inner">
+            <div class="wrapper__item">
+              <span class="span">01</span>
+              <ul class="btn__rectangle">
+                <li class="btn__rectangle_list">
+                  <button class="btn__rectangle_item btn__active" type="button"></button>
+                </li>
+                <li class="btn__rectangle_list">
+                  <button class="btn__rectangle_item" type="button"></button>
+                </li>
+                <li class="btn__rectangle_list">
+                  <button class="btn__rectangle_item" type="button"></button>
+                </li>
+                <li class="btn__rectangle_list">
+                  <button class="btn__rectangle_item" type="button"></button>
+                </li>
+              </ul>
+            </div>
+            <div class="wrapper__title">
+              <h1 class="title__banner">The ooh noo collection</h1>
+              <p class="subtitle">Designed in Slovenia</p>
+              @@include('blocks/button.html', {
+                "tag": "button",
+                "type": "button",
+                "name": "",
+                "value": "",
+                "class": "banner__js",
+                "text": "Explore now"
+              })
+            </div>
+            <img class="img__banner" src="img/banner.png" alt="banner" width="635" height="461">
+          </div>
+          <p class="text__banner">
+            Free (continental) USA shipping on all orders of $100 USD or more!
+          </p>
         </div>
-      </main>
-      @@include('blocks/footer.html')
-    </div>
+      </section>
+      <section class="category">
+        <div class="container">
+          <div class="category__inner">
+            <h2 class="title__two">Category Products</h2>
+            <div class="category__wrapper">
+              <ul class="category__list">
 
-    <script src="js/app.js" defer></script>
+                @@include('blocks/category_list.html', {
+                  "link": "#",
+                  "class": "",
+                  "text": "Apparel kids",
+                  "img": "./img/apparelKids.jpg"
+                })
+
+                @@include('blocks/category_list.html', {
+                  "link": "#",
+                  "class": "",
+                  "text": "Holiday Shop",
+                  "img": "./img/holidayShop.jpg"
+                })
+
+                @@include('blocks/category_list.html', {
+                  "link": "./toys.html",
+                  "class": "",
+                  "text": "Toys",
+                  "img": "./img/toys.jpg"
+                })
+
+                @@include('blocks/category_list.html', {
+                  "link": "",
+                  "class": "",
+                  "text": "Accessories",
+                  "img": "./img/accessories.jpg"
+                })
+
+                <!-- @@include('blocks/category_list.html', {
+                  "link": "",
+                  "class": "",
+                  "text": "Apparel adults",
+                  "img": "./img/apparelAdults.jpg"
+                })
+
+                @@include('blocks/category_list.html', {
+                  "link": "",
+                  "class": "",
+                  "text": "Sale",
+                  "img": "./img/sale.jpg"
+                }) -->
+
+              </ul>
+            </div>
+            <div class="slider__wrapper">
+              <button class="button__slider" type="button">
+                <svg width="13" height="26" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 2L3 15L16 28" stroke="#1E0606" stroke-width="4" />
+                </svg>
+              </button>
+              <button class="button__slider" type="button">
+                <svg width="13" height="26" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2L15 15L2 28" stroke="#1E0606" stroke-width="4" />
+                </svg>
+              </button>
+              <p>
+                Modern finds for the modern home. Curated goods by unique designers
+                around the world from fashion to furniture for kids and adults.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="delivery">
+        <div class="container ">
+          <img src="img/woman.jpg" alt="woman" width="480" height="559">
+          <div class="delivery__wrapper">
+            <h2 class="title__two">Delivery</h2>
+            <div class="subtitle__wrapper">
+              <p class="subtitle__two" tabindex="0">Delivery</p>
+              <p class="subtitle__two" tabindex="0">Guarantee</p>
+              <p class="subtitle__two" tabindex="0">Credit</p>
+            </div>
+            <p class="description">
+              Some days i feel like i've been working on dlk my entire life and
+              there are other days that i am completely shocked that four years
+              have flown by. It's simply magical.
+            </p>
+            <p class="description">
+              What started as an outlet to deal with the traumatic loss of my
+              husband, dlk has now become a truly happy place for me and i have
+              you and all of the beautiful designers that we work with to thank!
+            </p>
+            @@include('blocks/button.html', {
+              "tag": "a",
+              "type": "button",
+              "class": "",
+              "name": "",
+              "value": "",
+              "text": "Learn more"
+            })
+          </div>
+        </div>
+      </section>
+      <section class="company">
+        <div class="container">
+          <h2 class="title__two">Company</h2>
+          <ul class="company__list">
+            <li class="company__list_item"><img class="company__list_img" src="img/mail.png" alt="mail" width="193" height="60"></li>
+            <li class="company__list_item"><img class="company__list_img" src="img/apple.png" alt="apple" width="179" height="61"></li>
+            <li class="company__list_item"><img class="company__list_img" src="img/eltex.png" alt="eltex" width="216" height="46"></li>
+            <li class="company__list_item"><img class="company__list_img" src="img/owox.png" alt="owox" width="211" height="40"></li>
+          </ul>
+        </div>
+      </section>
+      <section class="about__company">
+        <div class="container">
+          <div class=" wrapper__section">
+            <div class="about__us">
+              <h2 class="title__two">Design Life Kids</h2>
+              <div class="about__us_inner">
+                <p class="subtitle__two">About Us</p>
+                <p>
+                  Some days i feel like i've been working on dlk my entire life and
+                  there are other days that i am completely shocked that four years have
+                  flown by. It's simply magical.
+                </p>
+                @@include('blocks/button.html', {
+                  "tag": "a",
+                  "type": "button",
+                  "class": "",
+                  "name": "",
+                  "value": "",
+                  "text": "Buy now"
+                })
+              </div>
+            </div>
+            <div class="contacts">
+              <h2 class="title__two">Contacts</h2>
+              <div class="contacts__inner">
+                <p>
+                  Some days i feel like i've been working on dlk my entire life and
+                  there are other days that i am completely shocked that four years have
+                  flown by. It's simply magical.
+                </p>
+                <map class="map" name="map"><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.537150624947!2d49.28814991584469!3d53.51246308001423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416879a82611632d%3A0xb18d94ffcf91e387!2zREwgQWNhZGVteSDigJQg0LrRg9GA0YHRiyDQv9GA0L7Qs9GA0LDQvNC80LjRgNC-0LLQsNC90LjRjw!5e0!3m2!1sru!2sru!4v1661175509935!5m2!1sru!2sru"
+                    width="483" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe></map>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('blocks/footer.html')
+    @@include('blocks/popup.html')
+    <script src="js/app.js"></script>
   </body>
 </html>

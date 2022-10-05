@@ -1,5 +1,96 @@
 <footer class="footer">
   <div class="container">
-    © 2022 Swimming Pool Plastering-Tile-Coping
+    <div class="footer__inner">
+      <section class="navigation">
+        <h3>Navigation</h3>
+        <p class="text__title">Navigation</p>
+        <ul class="navigation__list">
+          <li class="navigation__list_item"><a class="navigation__list_link" href="#">About Us</a></li>
+          <li class="navigation__list_item"><a class="navigation__list_link" href="#">Blog</a></li>
+          <li class="navigation__list_item"><a class="navigation__list_link" href="#">Design Services</a></li>
+          <li class="navigation__list_item"><a class="navigation__list_link" href="#">Featured On</a></li>
+          <li class="navigation__list_item"><a class="navigation__list_link" href="#">2018 Holiday Catalog</a></li>
+          <li class="navigation__list_item"><a class="navigation__list_link" href="#">Shop By Designer</a></li>
+        </ul>
+      </section>
+      <section class="information">
+        <h3>Customer Information</h3>
+        <p class="text__title">Customer Information</p>
+        <ul class="information__list">
+          <li class="information__list_item"><a class="information__list_link" href="#">Contact Us</a></li>
+          <li class="information__list_item"><a class="information__list_link" href="#">Sale Exclusions</a></li>
+          <li class="information__list_item"><a class="information__list_link" href="#">Shipping & Returns</a></li>
+          <li class="information__list_item"><a class="information__list_link" href="#">Terms & Conditions</a></li>
+          <li class="information__list_item"><a class="information__list_link" href="#">Privacy Policy</a></li>
+          <li class="information__list_item"><a class="information__list_link" href="#">Search</a></li>
+        </ul>
+      </section>
+      <div class="connect__wrapper">
+        <section class="connect">
+          <h3>Connect</h3>
+          <p class="text__title">Connect</p>
+          <form class="connect__form" action="#">
+            <input class="connect__input" type="text" placeholder="Email" />
+            @@include('blocks/button.html', {
+              "tag": "button",
+              "type": "submit",
+              "class": "",
+              "name": "submit_button",
+              "value": "join",
+              "text": "Join"
+            })
+          </form>
+        </section>
+        <section class="social">
+          <h3>Social networking</h3>
+          <ul class="social__list">
+            <li class="social__list_item">
+              <a href="https://facebook.com/">
+                <img src="img/icon/facebook.svg" alt="facebook" width="30" height="30">
+              </a>
+            </li>
+            <li class="social__list_item">
+              <a class="social__list_link" href="https://twitter.com/">
+                <img src="img/icon/twitter.svg" alt="twitter" width="30" height="30">
+              </a>
+            </li>
+            <li class="social__list_item">
+              <a class="social__list_link" href="https://ru.pinterest.com/">
+                <img src="img/icon/pinterest.svg" alt="pinterest" width="30" height="30">
+              </a>
+            </li>
+            <li class="social__list_item">
+              <a class="social__list_link" href="https://instagram.com/">
+                <img src="img/icon/instagram.svg" alt="instagram" width="30" height="30">
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <div class="border"></div>
+    <div class="footer__inner_lower">
+      <fieldset class="rating">
+        <legend class="rating__company">Company Rating</legend>
+        <div class="rating__group">
+          <input class="rating__input" type="radio" name="rating" id="rating-1" value="1" />
+          <label class="rating__star" for="rating-1" aria-label="ужасно"></label>
+
+          <input class="rating__input" type="radio" name="rating" id="rating-2" value="2" />
+          <label class="rating__star" for="rating-2" aria-label="плохо"></label>
+
+          <input class="rating__input" type="radio" name="rating" id="rating-3" value="3" />
+          <label class="rating__star" for="rating-3" aria-label="нормально"></label>
+
+          <input class="rating__input" type="radio" name="rating" id="rating-4" value="4" />
+          <label class="rating_star" for="rating-4" aria-label="хорошо"></label>
+
+          <input class="rating__input" type="radio" name="rating" id="rating-5" value="5" />
+          <label class="rating__star" for="rating-5" aria-label="отлично"></label>
+        </div>
+      </fieldset>
+      <p class="text__copyright">Copyright © 2018 Dlk • Design Life Kids</p>
+      <a href="#" class="text__web_design">Web Design — Direct Line Development</a>
+    </div>
   </div>
 </footer>

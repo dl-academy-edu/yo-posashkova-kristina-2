@@ -1,0 +1,93 @@
+/* POPUP */
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 25;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(125, 151, 218, 0.8);
+}
+
+.popup__open {
+  display: block;
+}
+
+.form__popup {
+  position: relative;
+  width: 680px;
+  background-color: #E5EAF8;
+  margin: 113px auto;
+  padding: 42px 40px;
+  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form__popup input {
+  margin-top: 6px;
+}
+
+.popup h2 {
+  display: none;
+}
+
+.popup input:hover {
+  border: #c29974 solid 1px;
+}
+
+.form__name,
+.wrapp,
+.form__message,
+.form__checkbox {
+  margin-bottom: 20px;
+}
+
+.label__checkbox {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.popup__btn:disabled {
+  background: #C1C1C1;
+  color: #E1E1E1;
+  font-weight: 700;
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 9px 22px;
+}
+
+.close__btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-right: -35px;
+  background: none;
+  cursor: pointer;
+}
+
+.close__btn:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.close__btn:active {
+  opacity: 0.3;
+}

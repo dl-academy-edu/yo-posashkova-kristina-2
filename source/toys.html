@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="google" content="notranslate">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>DL Academy</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <script>
+    var docElement = document.documentElement;
+    docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Montserrat:wght@200;700&family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="stylesheet" href="favicon.ico">
+
+  <!-- build:css -->
+  <link href="css/style.min.css" rel="stylesheet">
+  <!-- endbuild -->
+</head>
+
+<body>
+  <main>
+    @@include('blocks/header.html')
+    <section class="section__breadcrumbs">
+      <div class="container">
+        <h1>Toy for kids</h1>
+        <ul class="breadcrumbs subtitle">
+          <li class="breadcrumbs__list_item"><a class="breadcrumbs__list_link" href="index.html">Home</a></li>
+          <li class="breadcrumbs__list_item"><img src="img/breadcrumbs.png" alt="next"></li>
+          <li class="breadcrumbs__list_item"><a class="breadcrumbs__list_link" href="catalog.html">Catalog</a></li>
+          <li class="breadcrumbs__list_item"><img src="img/breadcrumbs.png" alt="next"></li>
+          <li class="breadcrumbs__list_item"><a class="breadcrumbs__list_link" href="toys.html">Toys</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="filter">
+      <h2>Filter</h2>
+      <div class="container">
+        <form class="filter__form" action="#">
+          <fieldset class="cost__filter">
+            <legend class="filter__legend">Cost</legend>
+            <input type="range" class="range" id="cost" name="cost" min="0" max="500" step="5">
+            <label for="cost"></label>
+            <div class="span__wrapper">
+              <span class="min">0</span>
+              <span class="max">500</span>
+            </div>
+          </fieldset>
+          <fieldset class="color__filter">
+            <legend class="filter__legend">Color</legend>
+            <ul class="color__list">
+              <li class="color__list_item">
+                <input class="custom__checkbox" type="checkbox" id="input-black" name="color" value="black" checked>
+                <label for="input-black">Black</label>
+              </li>
+              <li class="color__list_item">
+                <input class="custom__checkbox" type="checkbox" id="input-blue" name="color" value="blue">
+                <label for="input-blue">Blue</label>
+              </li>
+              <li class="color__list_item">
+                <input class="custom__checkbox" type="checkbox" id="input-green" name="color" value="green">
+                <label for="input-green">Green</label>
+              </li>
+              <li class="color__list_item">
+                <input class="custom__checkbox" type="checkbox" id="input-white" name="color" value="white">
+                <label for="input-white">White</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="delivery__filter">
+            <legend class="filter__legend">Delivery</legend>
+            <ul>
+              <li>
+                <input type="radio" id="input-free" class="radio__button" name="delivery" value="free">
+                <label for="input-free">Free shipping</label>
+              </li>
+              <li>
+                <input type="radio" id="input-fast" class="radio__button" name="delivery" value="fast" checked>
+                <label for="input-fast">Fast shipping</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="amount__filter">
+            <legend class="filter__legend">Amount</legend>
+            <ul class="amount__btn">
+              <li class="bnt_list_item">
+                <input type="radio" id="amount-1" class="radio__btn" name="amount" value="0-5" checked>
+                <label class="btn__label" for="amount-1">0-5</label>
+              </li>
+              <li class="bnt_list_item">
+                <input type="radio" id="amount-2" class="radio__btn" name="amount" value="10-20">
+                <label class="btn__label" for="amount-2">10-20</label>
+              </li>
+              <li class="bnt_list_item">
+                <input type="radio" id="amount-3" class="radio__btn" name="amount" value="20-50">
+                <label class="btn__label" for="amount-3">20-50</label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="apply">
+            @@include('blocks/button.html', {
+              "tag": "button",
+              "type": "submit",
+              "name": "submit_button",
+              "value": "apply",
+              "class": "",
+              "text": "Apply"
+            })
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="toys">
+      <h2>Toys</h2>
+      <div class="container">
+        <ul class="toys__list">
+          <li class="toys__list_item">
+            <a class="toys__list_link" href="#">Learn more</a>
+            <img class="toys__list_img" src="img/shark.png" alt="shark" width="380" height="385">
+            <p class="name__toy">Sharky bean bag chair cover</p>
+            <p class="price">$60.00 USD</p>
+          </li>
+          <li class="toys__list_item">
+            <a class="toys__list_link" href="#">Learn more</a>
+            <img class="toys__list_img" src="img/frames.png" alt="frames" width="380" height="385">
+            <p class="name__toy">Brass deco frames</p>
+            <p class="price">$66.00 USD</p>
+          </li>
+          <li class="toys__list_item">
+            <a class="toys__list_link" href="#">Learn more</a>
+            <img class="toys__list_img" src="img/apron.png" alt="apron" width="380" height="385">
+            <p class="name__toy"> Cibo full apron</p>
+            <p class="price">$60.00 USD</p>
+          </li>
+          <li class="toys__list_item">
+            <a class="toys__list_link" href="#">Learn more</a>
+            <img class="toys__list_img" src="img/gumballMachine.png" alt="gumball machine" width="380" height="385">
+            <p class="name__toy"> Gatcha gatcha gumball machine</p>
+            <p class="price">$56.00 USD</p>
+          </li>
+          <li class="toys__list_item">
+            <a class="toys__list_link" href="#">Learn more</a>
+            <img class="toys__list_img" src="img/candle.png" alt="candle" width="380" height="385">
+            <p class="name__toy"> Christmas advent scented candle</p>
+            <p class="price">$29.00 USD</p>
+          </li>
+          <li class="toys__list_item">
+            <a class="toys__list_link" href="#">Learn more</a>
+            <img class="toys__list_img" src="img/light.png" alt="light" width="380" height="382">
+            <p class="name__toy"> Tangle spinning tea light</p>
+            <p class="price">$56.00 USD</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    @@include('blocks/pagination.html')
+  </main>
+  @@include('blocks/footer.html')
+  </body>
+</html>

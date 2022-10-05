@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="google" content="notranslate">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>DL Academy</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <script>
+    var docElement = document.documentElement;
+    docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Montserrat:wght@200;700&family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="stylesheet" href="favicon.ico">
+
+  <!-- build:css -->
+  <link href="css/style.min.css" rel="stylesheet">
+  <!-- endbuild -->
+</head>
+
+<body>
+  @@include('blocks/header.html')
+  <main>
+    <section class="section__breadcrumbs">
+      <div class="container">
+        <h1>Category Products</h1>
+        <ul class="breadcrumbs subtitle">
+          <li class="breadcrumbs__list_item"><a class="breadcrumbs__list_link" href="index.html">Home</a></li>
+          <li class="breadcrumbs__list_item"><img src="img/breadcrumbs.png" alt="next"></li>
+          <li class="breadcrumbs__list_item"><a class="breadcrumbs__list_link" href="catalog.html">Catalog</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="products">
+      <div class="container">
+        <div class="category__inner">
+          <h2 class="title__two">Category Products</h2>
+          <div class="category__wrapper">
+            <ul class="category__list">
+              @@include('blocks/category_list.html', {
+                "link": "#",
+                "class": "",
+                "text": "Apparel kids",
+                "img": "./img/apparelKids.jpg"
+              })
+
+              @@include('blocks/category_list.html', {
+                "link": "#",
+                "class": "",
+                "text": "Holiday Shop",
+                "img": "./img/holidayShop.jpg"
+              })
+
+              @@include('blocks/category_list.html', {
+                "link": "../../toys.html",
+                "class": "",
+                "text": "Toys",
+                "img": "./img/toys.jpg"
+              })
+            </ul>
+            <ul class="category__list_two">
+
+              @@include('blocks/category_list.html', {
+                "link": "#",
+                "class": "category__list_item_two",
+                "text": "Accessories",
+                "img": "./img/accessories.jpg"
+              })
+
+              @@include('blocks/category_list.html', {
+                "link": "#",
+                "class": "category__list_item_two",
+                "text": "Apparel adults",
+                "img": "./img/apparelAdults.jpg"
+              })
+
+              @@include('blocks/category_list.html', {
+                "link": "#",
+                "class": "category__list_item_two",
+                "text": "Sale",
+                "img": "./img/sale.jpg"
+              })
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="product__description container">
+      <div class="product__description_wrapper">
+        <h2 class="title__two">Product Description</h2>
+        <p class="product__text">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost
+          really cry. You can even bathe her, just like a little sister.</p>
+        <p class="product__text">A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright.
+          Such a doll will be an excellent choice for a gift for a girl from 4 years old.</p>
+        <p class="product__text">The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for
+          water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other
+          for her young mistress.</p>
+      </div>
+    </section>
+  </main>
+@@include('blocks/footer.html')
+</body>
+
+</html>

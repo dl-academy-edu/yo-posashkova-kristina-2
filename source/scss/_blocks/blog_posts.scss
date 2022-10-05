@@ -1,0 +1,47 @@
+.posts__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.posts__list_item {
+  width: 380px;
+  margin-bottom: 20px;
+}
+
+.posts__list_img {
+  margin-bottom: 15px;
+}
+
+.data__post {
+  margin-bottom: 7px;
+  color: #818181;
+}
+
+.posts__list_link {
+  color: #1E0606;
+}
+
+
+.posts__list_link:hover {
+  text-decoration-line: underline;
+  transition: 0.3s;
+}
+
+.posts__list_link:active {
+  text-decoration-line: underline;
+}
+
+.name__post {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  text-transform: none;
+  margin-bottom: 15px;
+}
+
+.text__post {
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}

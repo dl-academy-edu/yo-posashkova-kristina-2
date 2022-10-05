@@ -1,0 +1,57 @@
+/* PRODUCTS */
+
+.products {
+  margin-bottom: 55px;
+}
+
+.products h2 {
+  display: none;
+}
+
+.category__wrapper {
+  width: 1080px;
+}
+
+.category__list,
+.category__list_two {
+  display: flex;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+  justify-content: start;
+}
+
+.category__list_two {
+  margin-top: 23px;
+  justify-content: end;
+}
+
+
+
+.category__list_link:hover {
+  text-decoration: underline;
+  transition: 0.2s;
+}
+
+.category__list_link:active {
+  text-decoration: underline;
+}
+
+/* PRODACT DESCRIPTION */
+
+.product__description_wrapper {
+  width: 680px;
+  margin-left: 200px;
+  margin-bottom: 55px;
+}
+
+.product__description_wrapper h2 {
+  margin-bottom: 25px;
+}
+
+.product__description_wrapper .product__text:not(:last-child) {
+  margin-bottom: 15px;
+}
