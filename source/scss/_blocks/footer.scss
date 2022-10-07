@@ -1,10 +1,221 @@
-/*
-  Код ниже нужно удалить, он добавлен просто для примера
-*/
+/* FOOTER */
+
 .footer {
-  background-color: #151515;
-  color: #fff;
-  padding: 40px 0;
-  text-align: center;
-  height: 100px;
+  min-width: 1400px;
+  height: 555px;
+  background: #434343;
+  color: #aaaaaa;
 }
+
+.footer__inner {
+  display: flex;
+  padding-top: 100px;
+  justify-content: space-between;
+}
+
+.footer__inner a {
+  color: #ffffff;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.footer__inner a:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.footer__inner a:active {
+  opacity: 0.2;
+  transition: 0.2s;
+}
+
+.footer__inner p {
+  color: #aaaaaa;
+}
+
+.footer h3 {
+  display: none;
+}
+
+.text__title::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #666666;
+  margin-top: 23px;
+  margin-bottom: 25px;
+  width: 380px;
+}
+
+.social ul {
+  display: flex;
+}
+
+.social__list_item {
+  margin-top: 25px;
+  margin-right: 10px;
+}
+
+.connect__input {
+  border: none;
+  height: 40px;
+  background: #666666;
+  width: 299px;
+  margin-right: 0px;
+}
+
+.connect__input::placeholder {
+  color: #ebebeb;
+  padding-top: 9px;
+  padding-left: 15px;
+}
+
+.connect__input:hover {
+  border: 1px solid #FFFDFD;
+}
+
+.connect__input:active {
+  border: 1px solid #FFFDFD;
+}
+
+.footer .button {
+  position: absolute;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.footer__inner_lower {
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.text__web_design {
+  color: #A2A2A2;
+  width: 380px;
+}
+
+.text__web_design:hover {
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.text__copyright {
+  color: #ffffff;
+  width: 380px;
+  margin: 0px;
+}
+
+.border {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #666666;
+  margin-top: 13px;
+  margin-bottom: 23px;
+  width: 1180px;
+}
+
+/* RATING STAR */
+
+.rating {
+  border: none;
+  margin-left: 0;
+  padding: 0;
+  width: 380px;
+  height: 22px;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.rating:hover .rating__company {
+  color: #C29974;;
+}
+
+.rating:checked .rating__company {
+  color: #C29974;
+}
+
+.rating__company {
+  float: left;
+  margin-right: 25px;
+  text-align: center;
+}
+
+.rating__group {
+  position: absolute;
+  bottom: 0;
+  left: 148px;
+  width: 82px;
+  height: 16px;
+  background-image: url(../img/icon/star.svg);
+  background-size: 17px 16px;
+  float: left;
+}
+
+.rating__input {
+  appearance: none;
+  position: absolute;
+  align-items: center;
+  left: 0;
+  margin: 0;
+  bottom: 0;
+  height: 16px;
+  font-size: inherit;
+  background-size: 17px 16px;
+  background-repeat: space repeat-x ;
+  cursor: pointer;
+  
+}
+
+.rating__input:focus {
+  outline: none;
+}
+
+.rating__input:checked {
+  background-image: url(../img/icon/starChecked.svg);
+  background-size: 17px 16px;
+  transition: 0.2s;
+}
+
+.rating__input:hover {
+  background-image: url(../img/icon/starHover.svg);
+  transition: 0.2s;
+}
+
+.rating__input:hover~.rating__input {
+  background-image: url(../img/icon/star.svg);
+}
+
+.rating__company:hover {
+  color: #C29974;
+  cursor: pointer;
+}
+
+/* OPTIONS */
+.rating__input:nth-of-type(1) {
+  width: 17px;
+  z-index: 5;
+}
+
+.rating__input:nth-of-type(2) {
+  width: 34px;
+  z-index: 4;
+}
+
+.rating__input:nth-of-type(3) {
+  width: 51px;
+  z-index: 3;
+}
+
+.rating__input:nth-of-type(4) {
+  width: 68px;
+  z-index: 2;
+}
+
+.rating__input:nth-of-type(5) {
+  width: 85px;
+  z-index: 1;
+}
+

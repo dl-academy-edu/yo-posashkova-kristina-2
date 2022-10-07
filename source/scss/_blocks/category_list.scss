@@ -1,0 +1,22 @@
+.category__list_item {
+  width: 280px;
+  height: 270px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.category__list_item_two {
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.category__list_link {
+  position: absolute;
+  color: #ffffff;
+  display: inline-flex;
+  max-width: 190px;
+}

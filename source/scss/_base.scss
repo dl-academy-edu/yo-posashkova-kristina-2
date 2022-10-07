@@ -4,20 +4,194 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+* {
+  box-sizing: border-box;
 }
 
-html,
 body {
-  background-color: $color-bg;
-  color: $color-text;
-  font-family: $font-base-family;
-  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1E0606;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  text-transform: uppercase;
   margin: 0;
-  min-height: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+
+.title__two {
+  font-size: 38px;
+  line-height: 46px;
+}
+
+.title__tree {
+  font-size: 24px;
+  line-height: 31px;
+  text-transform: none;
+}
+
+.subtitle {
+  font-family: "Crimson Text", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #1e0606;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 0;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+button {
+  border: none;
+}
+
+
+/* FORM */
+
+.form {
+  width: 600px;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.input__name {
+  width: 600px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.input__phone,
+.input__email {
+  width: 290px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.input__phone {
+  margin-right: 20px;
+}
+
+.wrapp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message {
+  resize: none;
+  width: 600px;
+  height: 150px;
+  overflow: hidden;
+  margin-top: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.message:hover {
+  border: 1px solid #C29974;
+}
+
+.form input:hover {
+  border: 1px solid #C29974;
+}
+
+/* BREADCRUMBS */
+
+.section__breadcrumbs {
+  margin: 20px 0 50px 0;
+}
+
+.breadcrumbs {
+  display: flex;
+  margin-top: 15px;
+}
+
+.breadcrumbs li:nth-last-child(1) {
+  opacity: 0.5;
+}
+
+.breadcrumbs__list_item {
+  margin-right: 20px;
+}
+
+.breadcrumbs__list_link {
+  color: #1E0606;
+}
+
+.breadcrumbs__list_link:hover {
+  opacity: 0.5;
+}
+
+/* CHECKBOX */
+
+.custom__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom__checkbox+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.color__list_item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.custom__checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 2px solid #C29974;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.custom__checkbox:hover+label {
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.custom__checkbox:checked+label::before {
+  background-color: #ffff;
+  background-image: url(../img/icon/checked.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 90%;
 }
