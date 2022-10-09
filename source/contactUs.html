@@ -10,17 +10,14 @@
   <title>DL Academy</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-
   <script>
     var docElement = document.documentElement;
     docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Montserrat:wght@200;700&family=Open+Sans:wght@400;700&display=swap"
-    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Montserrat:wght@200;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Favicon -->
   <link rel="stylesheet" href="favicon.ico">
@@ -33,20 +30,16 @@
 <body>
   @@include('blocks/header.html')
   <main>
-    <section class="section__breadcrumbs">
-      <div class="container">
-        <h1>Contact Us</h1>
-        <ul class="breadcrumbs subtitle">
-          <li class="breadcrumbs__list_item"><a class="breadcrumbs__list_link" href="index.html">Home</a></li>
-          <li class="breadcrumbs__list_item"><img src="img/breadcrumbs.png" alt="next"></li>
-          <li class="breadcrumbs__list_item"><a class="breadcrumbs__list_link" href="contactUs.html">Contact Us</a></li>
-        </ul>
-      </div>
+    <section class="breadcrumbs container">
+      <h1 class="breadcrumbs__heading">Contact Us</h1>
+      <ul class="breadcrumbs__list subtitle">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Home</a></li>
+        <li class="breadcrumbs__item"><img src="img/breadcrumbs.png" alt="next"></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="contactUs.html">Contact Us</a></li>
+      </ul>
     </section>
-    <section class="section__contacts_us">
-      <div class="container">
-        <div class="contact__us__wrapper">
-          <div class="form__wrapper">
+    <section class="contact-us container">
+          <div class="form__content">
             <form class="form" action="#">
               <div class="form__name">
                 <label for="input-name" class="label__form">Name</label>
@@ -83,16 +76,14 @@
               </div>
             </form>
           </div>
-          <div class="text__wrapper">
-            <p class="text__contacts_us">Our support team are on-hand to assist with any issues you are experiencing.
+          <div class="contact-us__wrapper">
+            <p class="contact-us__text">Our support team are on-hand to assist with any issues you are experiencing.
             </p>
-            <p class="text__contacts_us">Please use the form to contact us with your needs. Send us a message and we'll
+            <p class="contact-us__text">Please use the form to contact us with your needs. Send us a message and we'll
               respond as soon as possible.
             </p>
-            <h3 class="text">An expert is waiting to help you!</h3>
+            <h3 class="contact-us__heading">An expert is waiting to help you!</h3>
           </div>
-        </div>
-      </div>
     </section>
   </main>
   @@include('blocks/footer.html')

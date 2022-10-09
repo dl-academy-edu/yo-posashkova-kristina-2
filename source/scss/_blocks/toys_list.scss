@@ -1,0 +1,52 @@
+
+.toys__item {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    width: 380px;
+    margin-bottom: 20px;
+  }
+  
+  .toys__item:not(:nth-child(3n)) {
+    margin-right: 20px;
+  }
+  
+  .toys__link {
+    @include font(26px, 29px, 700);
+    display: inline-block;
+    width: 207px;
+    height: 207px;
+    padding-top: 82px;
+    position: absolute;
+    top: 89px;
+    left: 86px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
+    background-color: $color-form;
+    opacity: 0;
+  }
+  
+  .toys__link:hover {
+    opacity: 0.9;
+  }
+  
+  .toys__link:active {
+    opacity: 0.67;
+  }
+  
+  .toys__img {
+    margin-bottom: 25px;
+  }
+  
+  .toys__name {
+    @include font(14px, 19px, 400);
+    margin-bottom: 15px;
+  }
+  
+  .price {
+    font-weight: 700;
+    margin-bottom: 25px;
+  
+  }

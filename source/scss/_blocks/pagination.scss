@@ -21,13 +21,9 @@
 }
 
 .pagination__list_link {
+  @include font(16px, 20px, 700);
   font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
   text-transform: uppercase;
-  color: #1E0606;
 }
 
 .pagination__list_link:hover {

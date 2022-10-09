@@ -1,4 +1,4 @@
-.category__list_item {
+.category__item {
   width: 280px;
   height: 270px;
   position: relative;
@@ -9,12 +9,12 @@
   margin-right: 20px;
 }
 
-.category__list_item_two {
+.category__item_two {
   margin-right: 0;
   margin-left: 20px;
 }
 
-.category__list_link {
+.category__link {
   position: absolute;
   color: #ffffff;
   display: inline-flex;

@@ -2,6 +2,12 @@
   margin-bottom: 20px;
 }
 
-.posts h2 {
+.posts__heading {
   display: none;
+}
+
+.posts__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }

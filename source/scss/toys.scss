@@ -1,47 +1,52 @@
 /* FILTER */
 .filter {
   background-color: rgba(125, 151, 218, 0.2);
+
+  &__heading {
+    display: none;
+  }
+
+  &__form {
+    width: 1095px;
+    display: flex;
+    justify-content: space-between;
+    padding: 42px 0 42px 0;
+  }
+
+  &__fieldset {
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  &__legend {
+    font-weight: 700;
+    padding-bottom: 15px;
+  }
+
+  &__cost {
+    margin-right: 94px;
+  }
+  
+  &__color {
+    margin-right: 124px;
+  }
+
+  &__delivery {
+    margin-right: 69px;
+  }
+
+  &__amount {
+    margin-right: 58px;
+  }
 }
 
-.filter h2 {
-  display: none;
-}
-
-.filter__form {
-  width: 1095px;
+.amount__list {
   display: flex;
-  justify-content: space-between;
-  padding: 42px 0 42px 0;
 }
 
-.filter__form fieldset {
-  border: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  padding: 0;
-}
-
-.filter__legend {
-  font-weight: 700;
-  padding-bottom: 15px;
-}
-
-.cost__filter {
-  margin-right: 94px;
-}
-
-.color__filter {
-  margin-right: 124px;
-}
-
-.delivery__filter {
-  margin-right: 69px;
-}
-
-.amount__filter {
-  margin-right: 58px;
-}
 
 /* RANGE */
 .range {
@@ -133,7 +138,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 
 .bnt_list_item {
   display: inline-block;
-  float: left;
 }
 
 .radio__btn {
@@ -176,71 +180,14 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 .toys {
   margin-top: 60px;
   margin-bottom: 36px;
-}
 
-.toys h2 {
-  display: none;
-}
+  &__heading {
+    display: none;
+  }
 
-.toys__list {
-  display: flex;
-  flex-wrap: wrap;
-  text-transform: uppercase;
-}
-
-.toys__list_item {
-  position: relative;
-  align-items: center;
-  text-align: center;
-  width: 380px;
-  margin-bottom: 20px;
-}
-
-.toys__list_item:not(:nth-child(3n)) {
-  margin-right: 20px;
-}
-
-.toys__list_link {
-  display: inline-block;
-  width: 207px;
-  height: 207px;
-  padding-top: 82px;
-  position: absolute;
-  top: 89px;
-  left: 86px;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 29px;
-  text-transform: uppercase;
-  color: #1E0606;
-  text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
-  background-color: #E5EAF8;
-  opacity: 0;
-}
-
-.toys__list_link:hover {
-  opacity: 0.9;
-}
-
-.toys__list_link:active {
-  opacity: 0.67;
-}
-
-.toys__list_img {
-  margin-bottom: 25px;
-}
-
-.name__toy {
-  margin-bottom: 15px;
-  font-size: 14px;
-  line-height: 19px;
-}
-
-.price {
-  font-weight: 700;
-  margin-bottom: 25px;
-
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+  }
 }
