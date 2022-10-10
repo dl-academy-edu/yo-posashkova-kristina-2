@@ -14,12 +14,10 @@
 
 .category__list,
 .category__list_two {
+  @include font(26px, 32px, 700);
   display: flex;
   text-transform: uppercase;
   font-family: "Montserrat";
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 32px;
   text-align: center;
   justify-content: start;
 }
@@ -31,27 +29,28 @@
 
 
 
-.category__list_link:hover {
+.category__link:hover {
   text-decoration: underline;
   transition: 0.2s;
 }
 
-.category__list_link:active {
+.category__link:active {
   text-decoration: underline;
 }
 
 /* PRODACT DESCRIPTION */
 
-.product__description_wrapper {
-  width: 680px;
-  margin-left: 200px;
-  margin-bottom: 55px;
+.product-description {
+  &__content {
+    width: 680px;
+    margin-left: 200px;
+    margin-bottom: 55px;
+  }
+  &__heading {
+    margin-bottom: 25px
+  }
 }
 
-.product__description_wrapper h2 {
-  margin-bottom: 25px;
-}
-
-.product__description_wrapper .product__text:not(:last-child) {
+.product-description__text:not(:last-child) {
   margin-bottom: 15px;
 }

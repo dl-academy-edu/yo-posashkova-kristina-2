@@ -10,17 +10,14 @@
   <title>DL Academy</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-
   <script>
     var docElement = document.documentElement;
     docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Montserrat:wght@200;700&family=Open+Sans:wght@400;700&display=swap"
-    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Montserrat:wght@200;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Favicon -->
   <link rel="stylesheet" href="favicon.ico">
@@ -33,23 +30,21 @@
 <body>
   <main>
     @@include('blocks/header.html')
-    <section class="section__breadcrumbs">
-      <div class="container">
-        <h1>Toy for kids</h1>
-        <ul class="breadcrumbs subtitle">
-          <li class="breadcrumbs__list_item"><a class="breadcrumbs__list_link" href="index.html">Home</a></li>
-          <li class="breadcrumbs__list_item"><img src="img/breadcrumbs.png" alt="next"></li>
-          <li class="breadcrumbs__list_item"><a class="breadcrumbs__list_link" href="catalog.html">Catalog</a></li>
-          <li class="breadcrumbs__list_item"><img src="img/breadcrumbs.png" alt="next"></li>
-          <li class="breadcrumbs__list_item"><a class="breadcrumbs__list_link" href="toys.html">Toys</a></li>
-        </ul>
-      </div>
+    <section class="breadcrumbs container">
+      <h1 class="breadcrumbs__heading">Toy for kids</h1>
+      <ul class="breadcrumbs__list subtitle">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Home</a></li>
+        <li class="breadcrumbs__item"><img src="img/breadcrumbs.png" alt="next"></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Catalog</a></li>
+        <li class="breadcrumbs__item"><img src="img/breadcrumbs.png" alt="next"></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="toys.html">Toys</a></li>
+      </ul>
     </section>
     <section class="filter">
-      <h2>Filter</h2>
+      <h2 class="filter__heading">Filter</h2>
       <div class="container">
         <form class="filter__form" action="#">
-          <fieldset class="cost__filter">
+          <fieldset class="filter__fieldset filter__cost">
             <legend class="filter__legend">Cost</legend>
             <input type="range" class="range" id="cost" name="cost" min="0" max="500" step="5">
             <label for="cost"></label>
@@ -58,28 +53,28 @@
               <span class="max">500</span>
             </div>
           </fieldset>
-          <fieldset class="color__filter">
+          <fieldset class="filter__fieldset filter__color">
             <legend class="filter__legend">Color</legend>
             <ul class="color__list">
-              <li class="color__list_item">
+              <li class="color__item">
                 <input class="custom__checkbox" type="checkbox" id="input-black" name="color" value="black" checked>
                 <label for="input-black">Black</label>
               </li>
-              <li class="color__list_item">
+              <li class="color__item">
                 <input class="custom__checkbox" type="checkbox" id="input-blue" name="color" value="blue">
                 <label for="input-blue">Blue</label>
               </li>
-              <li class="color__list_item">
+              <li class="color__item">
                 <input class="custom__checkbox" type="checkbox" id="input-green" name="color" value="green">
                 <label for="input-green">Green</label>
               </li>
-              <li class="color__list_item">
+              <li class="color__item">
                 <input class="custom__checkbox" type="checkbox" id="input-white" name="color" value="white">
                 <label for="input-white">White</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="delivery__filter">
+          <fieldset class="filter__fieldset filter__delivery">
             <legend class="filter__legend">Delivery</legend>
             <ul>
               <li>
@@ -92,10 +87,10 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="amount__filter">
+          <fieldset class="filter__fieldset filter__amount">
             <legend class="filter__legend">Amount</legend>
-            <ul class="amount__btn">
-              <li class="bnt_list_item">
+            <ul class="amount__list">
+              <li class="amount__list_item">
                 <input type="radio" id="amount-1" class="radio__btn" name="amount" value="0-5" checked>
                 <label class="btn__label" for="amount-1">0-5</label>
               </li>
@@ -122,48 +117,70 @@
         </form>
       </div>
     </section>
-    <section class="toys">
-      <h2>Toys</h2>
-      <div class="container">
+    <section class="toys container">
+      <h2 class="toys__heading">Toys</h2>
         <ul class="toys__list">
-          <li class="toys__list_item">
-            <a class="toys__list_link" href="#">Learn more</a>
-            <img class="toys__list_img" src="img/shark.png" alt="shark" width="380" height="385">
-            <p class="name__toy">Sharky bean bag chair cover</p>
-            <p class="price">$60.00 USD</p>
+          <li>
+            @@include('blocks/toys_list.html', {
+              "link": "#",
+              "text": "Learn more",
+              "img": "img/shark.png",
+              "alt": "shark",
+              "name": "Sharky bean bag chair cover",
+              "price": "$60.00 USD"
+            })
           </li>
-          <li class="toys__list_item">
-            <a class="toys__list_link" href="#">Learn more</a>
-            <img class="toys__list_img" src="img/frames.png" alt="frames" width="380" height="385">
-            <p class="name__toy">Brass deco frames</p>
-            <p class="price">$66.00 USD</p>
+          <li>
+            @@include('blocks/toys_list.html', {
+              "link": "#",
+              "text": "Learn more",
+              "img": "img/frames.png",
+              "alt": "frames",
+              "name": "Brass deco frames",
+              "price": "$66.00 USD"
+            })
           </li>
-          <li class="toys__list_item">
-            <a class="toys__list_link" href="#">Learn more</a>
-            <img class="toys__list_img" src="img/apron.png" alt="apron" width="380" height="385">
-            <p class="name__toy"> Cibo full apron</p>
-            <p class="price">$60.00 USD</p>
+          <li>
+            @@include('blocks/toys_list.html', {
+              "link": "#",
+              "text": "Learn more",
+              "img": "img/apron.png",
+              "alt": "apron",
+              "name": "Cibo full apron",
+              "price": "$60.00 USD"
+            })
           </li>
-          <li class="toys__list_item">
-            <a class="toys__list_link" href="#">Learn more</a>
-            <img class="toys__list_img" src="img/gumballMachine.png" alt="gumball machine" width="380" height="385">
-            <p class="name__toy"> Gatcha gatcha gumball machine</p>
-            <p class="price">$56.00 USD</p>
+          <li>
+            @@include('blocks/toys_list.html', {
+              "link": "#",
+              "text": "Learn more",
+              "img": "img/gumballMachine.png",
+              "alt": "gumball machine",
+              "name": "Gatcha gatcha gumball machine",
+              "price": "$56.00 USD"
+            })
           </li>
-          <li class="toys__list_item">
-            <a class="toys__list_link" href="#">Learn more</a>
-            <img class="toys__list_img" src="img/candle.png" alt="candle" width="380" height="385">
-            <p class="name__toy"> Christmas advent scented candle</p>
-            <p class="price">$29.00 USD</p>
+          <li>
+            @@include('blocks/toys_list.html', {
+              "link": "#",
+              "text": "Learn more",
+              "img": "img/candle.png",
+              "alt": "candle",
+              "name": "Christmas advent scented candle",
+              "price": "$29.00 USD"
+            })
           </li>
-          <li class="toys__list_item">
-            <a class="toys__list_link" href="#">Learn more</a>
-            <img class="toys__list_img" src="img/light.png" alt="light" width="380" height="382">
-            <p class="name__toy"> Tangle spinning tea light</p>
-            <p class="price">$56.00 USD</p>
+          <li>
+            @@include('blocks/toys_list.html', {
+              "link": "#",
+              "text": "Learn more",
+              "img": "img/light.png",
+              "alt": "light",
+              "name": "Tangle spinning tea light",
+              "price": "$56.00 USD"
+            })
           </li>
         </ul>
-      </div>
     </section>
     @@include('blocks/pagination.html')
   </main>
