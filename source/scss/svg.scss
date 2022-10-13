@@ -1,0 +1,209 @@
+.svg {
+  margin-top: 50x;
+  margin-bottom: 60px;
+
+  &__icon {
+    margin-left: -20px;
+    margin-top: -20px;
+  }
+}
+
+.sun {
+  animation: sun 5s ease-in-out 1s infinite;
+  position: absolute;
+}
+
+.sky {
+  animation: sky 5s ease-in-out 1s infinite;
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes sun{
+  0% {
+    fill: #FFCE54;
+  
+  }
+  50% {
+    fill:  #CCD1D9;
+  }
+  100% {
+    fill: #FFCE54;
+
+  }
+}
+
+@keyframes sky{
+  0% {
+    fill: #5D9CEC;
+  }
+  50% {
+    fill: #003170;
+  }
+  100% {
+    fill: #5D9CEC;
+  }
+}
+
+.strok-9 {
+  animation: strok9 3s ease-in-out infinite;
+}
+
+.strok-8 {
+  animation: strok8 3s ease-in-out infinite;
+}
+
+.strok-7 {
+  animation: strok7 3s ease-in-out infinite;
+}
+
+.strok-6 {
+  animation: strok6 3s ease-in-out infinite;
+}
+
+.strok-5 {
+  animation: strok5 3s ease-in-out infinite;
+}
+
+.strok-4 {
+  animation: strok4 3s ease-in-out infinite;
+}
+
+.strok-3 {
+  animation: strok3 3s ease-in-out infinite;
+}
+
+.strok-2 {
+  animation: strok2 3s ease-in-out infinite;
+}
+
+.strok-1 {
+  animation: strok1 3s ease-in-out infinite;
+}
+
+@keyframes strok1 {
+  0% {
+    stroke: #5D9CEC;
+    opacity: 1;
+  }
+
+  50% {
+    stroke: #FFCE54;
+  }
+
+  100% {
+    stroke: #5D9CEC;
+    opacity: 1;
+  }
+}
+
+@keyframes strok9 {
+  0% {
+    stroke: #5D9CEC;
+    opacity: 1;
+  }
+
+  50% {
+    stroke: #FFCE54;
+  }
+
+  100% {
+    stroke: #5D9CEC;
+    opacity: 1;
+  }
+}
+
+@keyframes strok2 {
+  0% {
+    stroke: #A0D468;
+    opacity: 1;
+  }
+
+  50% {
+    stroke: #ED5565;
+  }
+
+  100% {
+    stroke: #A0D468;
+    opacity: 1;
+  }
+}
+
+@keyframes strok8 {
+  0% {
+    stroke: #A0D468;
+    opacity: 1;
+  }
+
+  50% {
+    stroke: #ED5565;
+  }
+
+  100% {
+    stroke: #A0D468;
+    opacity: 1;
+  }
+}
+
+@keyframes strok3 {
+  0%{
+      stroke: #ED5565;
+      opacity: 1;     
+  }
+  50% {
+      stroke: #A0D468;
+      fill: #A0D468;
+  }
+  100% {
+      stroke: #ED5565;
+      fill: #ED5565;
+      opacity: 1;    
+  }
+  }
+
+@keyframes strok7 {
+  0%{
+      stroke: #ED5565;
+      opacity: 1;     
+  }
+  50% {
+      stroke: #A0D468;
+  }
+  100% {
+      stroke: #ED5565;
+      opacity: 1;    
+  }
+  }
+
+  @keyframes strok6 {
+    0%{
+        stroke: #FFCE54;
+        opacity: 1;     
+    }
+    50% {
+        stroke: #5D9CEC;
+    }
+    100% {
+        stroke: #FFCE54;
+        opacity: 1;    
+    }
+    }
+
+    @keyframes strok4 {
+      0%{
+          stroke: #FFCE54;
+          fill: #FFCE54;
+          opacity: 1;     
+      }
+      50% {
+          stroke: #5D9CEC;
+          fill: #5D9CEC;
+      }
+      100% {
+          stroke: #FFCE54;
+          fill: #FFCE54;
+          opacity: 1;    
+      }
+      }
+
+
