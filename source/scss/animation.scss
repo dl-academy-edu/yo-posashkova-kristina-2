@@ -154,7 +154,7 @@
 
   &__message_two {
     opacity: 0;
-    animation: man-message2 5s ease-in 10s;
+    animation: man-message2 5s ease-in 9s;
 
     &_img {
       filter: drop-shadow(5px 5px 5px #666666);
@@ -366,10 +366,7 @@
   0% {
     opacity: 0;
   }
-  70% {
-    opacity: 0;
-  }
-  80% {
+  50%{
     opacity: 1;
   }
   100% {
