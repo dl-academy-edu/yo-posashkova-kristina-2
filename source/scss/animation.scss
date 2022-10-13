@@ -6,6 +6,7 @@
     &__content {
       margin-top: 50px;
       margin-bottom: 70px;
+      overflow: hidden
     }
 
     &__heading {
@@ -36,22 +37,34 @@
       width: 1500px;
       height: 125px;
       flex-wrap: nowrap;
-      animation: cars 20s;
+
+      &_one {
+        animation: cars1 6s linear 4s infinite;
+        opacity: 0;
+        z-index: 3;
+      }
 
       &_two {
         margin-left: 100px;
+        animation: cars2 6s linear 3s infinite;
+        opacity: 0;
         
       }
 
       &_three {
         margin-left: 100px;
         margin-bottom: 10px;
+        animation: cars3 6s linear 1s infinite;
+        opacity: 0;
+        z-index: 2;
       }
 
       &_four {
         position: absolute;
         margin-left: 300px;
         margin-top: -30px;
+        animation: cars4 6s linear infinite;
+        opacity: 0;
       }
     }
 
@@ -95,14 +108,15 @@
   right: -15px;
   top: 440px;
   z-index: 10;
-  animation: taxi 20s linear;
+  opacity: 0;
+  animation: taxi 9s cubic-bezier(0,0.8,0.7,0) 4s;
 
   &__message {
     opacity: 0;
     position: inherit;
     right: 413px;
     top: -53px;
-    animation: taxi-message 20s;
+    animation: taxi-message 4s ease-in 6s;
 
     &_img {
       filter: drop-shadow(5px 5px 5px #666666);
@@ -131,7 +145,7 @@
     top: -102px;
     z-index: 19;
     opacity: 0;
-    animation: man-message 12s;
+    animation: man-message 4s ease-in 3s;
 
     &_img {
       filter: drop-shadow(5px 5px 5px #666666);
@@ -140,7 +154,7 @@
 
   &__message_two {
     opacity: 0;
-    animation: man-message2 20s;
+    animation: man-message2 5s ease-in 10s;
 
     &_img {
       filter: drop-shadow(5px 5px 5px #666666);
@@ -156,7 +170,7 @@
   }
 
   &__hand {
-    animation: man-hand 12s;
+    animation: man-hand 4s ease-in-out 3s;
     position: inherit;
     top: -40px;
     right: 100px;
@@ -219,22 +233,61 @@
 
 // Animation
 
-@keyframes cars {
+@keyframes cars1 {
   0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(400px);
-  }
+    transform: translateX(-200px);
+    opacity: 1;
   }
 
+  100%{
+  transform: translateX(1500px);
+  opacity: 1;
+  }
+}
 
+
+  @keyframes cars2 {
+    0% {
+      transform: translateX(-500px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(1200px);
+      opacity: 1;
+    }
+    }
+
+    @keyframes cars3 {
+      0% {
+        transform: translateX(-900px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(800px);
+        opacity: 1;
+      }
+      }
+
+      @keyframes cars4 {
+        0% {
+          transform: translateX(-1400px);
+          opacity: 1;
+        }
+        100% {
+          transform: translateX(300px);
+          opacity: 1;
+        }
+        }
   @keyframes taxi {
     0% {
       transform: translateX(1000px);
+      opacity: 1;
     }
+
+    
     100%{
       transform: translateX(-1600px);
+      opacity: 1;
     }
   }
 
@@ -243,14 +296,8 @@
       opacity: 0;
     }
 
-    25% {
-      opacity: 0;
-    }
-    50% {
+    40% {
       opacity: 1;
-    }
-    70% {
-      opacity: 0;
     }
     100% {
     opacity: 0;
