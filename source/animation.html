@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="google" content="notranslate">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>DL Academy</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <script>
+    var docElement = document.documentElement;
+    docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Montserrat:wght@200;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="stylesheet" href="favicon.ico">
+
+  <!-- build:css -->
+  <link href="css/style.min.css" rel="stylesheet">
+  <!-- endbuild -->
+</head>
+
+<body>
+  @@include('blocks/header.html')
+  <main>
+    <section class="breadcrumbs container">
+      <h1 class="breadcrumbs__heading">Animation scene</h1>
+      <ul class="breadcrumbs__list subtitle">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Home</a></li>
+        <li class="breadcrumbs__item"><img src="img/breadcrumbs.png" alt="next"></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="animation.html">Animation</a></li>
+      </ul>
+    </section>
+    <section class="animation animation__content">
+      <h2 class="animation__heading">Animation</h2>
+        <img class="animation__clouds" src="./img/animation/clouds.png" alt="clouds" width="1342" height="135">
+        <img class="animation__town" src="./img/animation/town.png" alt="town" width="1585" height="358">
+        <img class="animation__road_one" src="./img/animation/road.png" alt="road"  width="1543" height= "85">
+        <div class="animation__cars ">
+          <img class="animation__cars_one" src="./img/animation/сarOne.png" alt="car" width="251" height="99">
+          <img class="animation__cars_two" src="./img/animation/carTwo.png" alt="car" width="203" height="96">
+          <img class="animation__cars_three" src="./img/animation/carThree.png" alt="car" width="246" height="65">
+          <img class="animation__cars_four" src="./img/animation/carFour.png" alt="car" width="268" height="156">
+        </div>
+        <div class="animation__lanterns">
+          <img class="animation__lanterns_one" src="./img/animation/lanterns.png" alt="lanterns" width="151" height="395">
+          <img class="animation__lanterns_two" src="./img/animation/lanterns.png" alt="lanterns" width="151" height="395">
+        </div>
+        <img class="animation__road_two" src="./img/animation/road.png" alt="road" width="1585" height="98">
+        <div class="taxi">
+          <div class="taxi__message">
+            <img class="taxi__message_img" src="./img/animation/messageTaxi.png" alt="message taxi" width="160" height="99">
+            <p class="taxi__text">Я вообще-то не за вами!</p>
+          </div>
+          <img class="taxi__car" src="./img/animation/taxi.png" alt="taxi" width="886" height="266">
+        </div>
+      <img class="animation__lantern" src="./img/animation/lantern.png" alt="lantern" width="214" height="562">
+        <div class="woman">
+          <div class="woman__message">
+            <img class="woman__message_img" src="./img/animation/messageWoman.png" alt="message woman" width="160" height="99">
+            <p class="woman__text">Джеси, смотри, такси едет!</p>
+          </div>
+          <img class="woman__body" src="./img/animation/woman.png" alt="woman" width="98" height="267">
+          <img class="woman__hand" src="./img/animation/womanHand.png" alt="woman hand">
+        </div> 
+
+      <img class="animation__suitcases" src="./img/animation/suitcases.png" alt="suitcases" width="191" height="95">
+
+        <div class="man">
+          <div class="man__message">
+            <img class="man__message_img" src="./img/animation/messageMan.png" alt="message man" width="160" height="99">
+            <p class="man__text">Эй, такси, такси!</p>
+            <p class="man__text"></p>
+          </div>
+          <div class="man__message man__message_two">
+            <img class="man__message_img"  src="./img/animation/messageMan.png" alt="message man" width="160" height="99">
+            <p class="man__text_two">Ок, ждем ещё!</p>
+          </div>
+          
+          <img class="man__body" src="./img/animation/man.png" alt="man" width="205" height="400">
+          <img class="man__hand" src="./img/animation/manHand.png" alt="">
+        </div>
+        <img class="animation__footway" src="./img/animation/footway.png" alt="footway" width="" height="78">
+    
+    </section>
+  </main>
+  @@include('blocks/footer.html')
+</body>
+
+</html>
