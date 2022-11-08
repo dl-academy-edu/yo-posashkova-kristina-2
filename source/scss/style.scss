@@ -31,6 +31,7 @@
 @import "contactUs";
 @import "animation";
 @import "svg";
+@import "grid";
 
 
 
@@ -53,10 +54,15 @@
   justify-content: center;
   margin-top: 89px;
 
+
   &__content {
   display: flex;
   background: #eee4db;
-  position: relative;
+    &_two {
+      background: #c29974;
+      max-width: 1180px;
+      text-align: center;
+    }
 }
 
   &__wrapper {
@@ -93,17 +99,19 @@
     text-align: center;
     text-transform: uppercase;
     color: #ffffff;
-    background: #c29974;
+    
     display: inline-block;
-    padding: 11px 364px;
+    padding: 11px 20px;
+    
   }
-
-  &____img {
-    width: 635px;
-    height: 458px;
+  &__wrapper_img {
+    position: relative;
+  }
+  &__img {    
     position: absolute;
-    top: -86px;
-    left: 445px;
+    top: -89px;
+
+    max-width: 635px;
   }
 }
 
@@ -142,6 +150,154 @@
 }
 
 
+
+  .btn__list {
+    width: 27px;
+    height: 2.67px;
+  }
+
+  @media screen and (max-width:1293px) {
+    .banner__img {
+      top: 7px;
+      width: 504px;
+      height: auto;
+      left: -10px;
+    }
+    .banner {
+      margin-top: 0;
+    }
+    
+
+  }
+  @media screen and (max-width:1137px) {
+    .banner__img {
+      height: auto;
+      left: -110px;
+      top: 15px;
+      width: 493px;
+    }
+  }
+
+  @media screen and (max-width:1000px) {
+    .banner__img {
+      height: auto;
+      left: -120px;
+      top: 50px;
+      width: 445px;
+    }
+  }
+
+  @media screen and (max-width:950px){
+    .banner__img {
+    height: 286px;
+    left: -126px;
+      top: 86px;
+      width: 385px;
+    }
+
+
+  .banner__wrapper {
+margin: 17px 0 0 11px;
+  }
+  .banner__wrapper_two {
+    padding-top: 76px;
+    padding-bottom: 102px;
+  }
+  .banner__span {
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 59px;
+  }
+
+  .banner__heading {
+    width: 307px;
+    font-size: 40px;
+    line-height: 44px;
+  }
+  }
+
+      
+@media screen and (max-width:767px) {
+
+  .banner__img {
+    height: 226px;
+    left: -126px;
+    top: 138px;
+    width: 292px;
+  }
+  .banner {
+    width: 100%;
+  }
+  .banner__heading {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+
+  .banner__content {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width:575px) {
+
+  .banner__img {
+    height: auto;
+    left: 54px;
+    top: 243px;
+    width: 292px;
+  }
+
+    .banner__wrapper_two {
+    width: 276px;
+    order: 1;
+    padding-top: 80px;
+    padding-bottom: 188px;
+  }
+}
+@media screen and (max-width:450px) {
+  .banner {
+    width: 100%;
+  }
+  .banner__heading {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .banner__wrapper_two {
+    width: 276px;
+    order: 1;
+    padding-top: 80px;
+  }
+  .banner__wrapper {
+    order: 2;
+  }
+
+  .banner__content {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width:370px) {
+  .banner__img {
+    height: auto;
+    left: 56px;
+    top: 281px;
+    width: 239px;
+
+  }
+
+  .banner__heading {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .banner__wrapper_two {
+    width: 235px;
+  }
+}
+
 /* CATEGORY PRODUCTS */
 
 .category {
@@ -149,14 +305,20 @@
 
   &__wrapper {
     margin-top: 30px;
+    max-width: 1180px;
   }
 
-  &_list {
+  &__list {
     @include font(26px, 32px, 700);
     display: flex;
     text-transform: uppercase;
     font-family: "Montserrat";
     text-align: center;
+    overflow: scroll;
+    width: 1180px;
+    width: 100%;
+    max-width: 1180px;
+
 }
 }
 
@@ -171,7 +333,7 @@
 
 .category__slider {
   display: flex;
-  width: 680px;
+  max-width: 680px;
   margin-top: 33px;
 
   &_text {
@@ -214,7 +376,7 @@
   }
 
   &__subtitle {
-    width: 326px;
+    max-width: 326px;
     height: 55px;
     margin-left:-60px;
     padding-left: 60px;
@@ -223,7 +385,7 @@
   }
 
   &__wrapper {
-    width: 326px;
+    max-width: 326px;
     margin: 0;
     margin-bottom: 22px;
   }
@@ -234,11 +396,11 @@
 
   &__description {
     margin-bottom: 15px;
-    width: 480px;
+    max-width: 480px;
   }
 
   &__wrapper {
-    width: 326px;
+    max-width: 326px;
     margin: 0;
     margin-bottom: 22px;
   }
@@ -292,7 +454,7 @@
 }
 
   &__text {
-    width: 483px;
+    max-width: 483px;
 }
 
   &__btn {
@@ -315,7 +477,7 @@
   }
 
   &__text {
-    width: 483px;
+    max-width: 483px;
 }
 
   &__map {
