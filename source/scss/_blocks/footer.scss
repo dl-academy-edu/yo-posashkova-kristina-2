@@ -8,7 +8,12 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    &_two {
+      display: flex
+    }
+
   }
+
 
   &__heading {
     @include font(16px, 22px, 400);
@@ -24,23 +29,24 @@
       background: #666666;
       margin-top: 23px;
       margin-bottom: 25px;
-      width: 380px;
+      max-width: 380px;
     }
   
     &__nav, &__info {
       margin-right: 20px;
+      width: 380px;
     }
     
     &__text {
       color: #ffffff;
-      width: 380px;
-      margin: 0px;
+      // width: 291px;
+      // margin-right: 109px;
       opacity: 0.9;
     }
 
     &__link {
       color: #A2A2A2;
-      width: 380px;
+      // width: 298px;
     }
 
     &__link:hover {
@@ -70,6 +76,10 @@
       }
   }
   
+.connect__wrapper {
+    width: 380px;
+  }
+
 .connect__form {
   display: flex;
 }
@@ -116,5 +126,117 @@
   background: #666666;
   margin-top: 13px;
   margin-bottom: 23px;
-  width: 1180px;
+  max-width: 1180px;
+}
+
+.wrap__text, .wrap__link {
+  width: 400px;
+  white-space: nowrap;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width:1350px){
+  .connect__input {
+    max-width: 380px;
+    width: 100%;
+  }
+
+
+}
+
+// @media screen and (max-width:780px) {
+//   .connect__input {
+//     width: 121px;
+//   }
+// }
+
+@media screen and (max-width:1157px) {
+  .footer {
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+
+  .footer__content_two {
+    flex-wrap: wrap;
+    
+  }
+  .rating {
+    flex-basis: 100%;
+    margin-bottom: 15px;
+  }
+  .wrap__link {
+    width: 313px;
+    margin: 0;
+  }
+
+  .wrap__text {
+    margin-left: 0;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    width: 291px;
+  }
+
+}
+
+@media screen and (max-width:750px) {
+  .footer {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .footer__content {
+    flex-wrap: wrap;
+  }
+
+  .footer__nav, .footer__info, .connect__wrapper {
+    flex-basis: 100%;
+    margin-bottom: 25px;
+    margin-right: 0;
+  }
+
+  .connect__wrapper {
+    margin-top: 20px;
+    margin-bottom: 47px;
+  }
+
+  // .connect__input {
+  //   max-width: 100%;
+  // }
+
+  .info__list, .nav__list {
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 19px;
+    column-count: 2;
+  }
+
+  .footer__heading::after {
+    max-width: 100%;
+
+  }
+
+
+  .footer__heading_mobile::after {
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .social__img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .social__item:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  // .connect__input {
+  //   max-width: 400px;
+  //   width: 100%;
+  // }
+
+  .social__list {
+    margin-top: 20px;
+  }
 }

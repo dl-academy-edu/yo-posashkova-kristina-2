@@ -2,7 +2,7 @@
   <div class="container">
     <div class="footer__content">
       <section class="footer__nav">
-        <h3 class="footer__heading">Navigation</h3>
+        <h3 class="footer__heading footer__heading_mobile">Navigation</h3>
         <ul class="nav__list">
           <li class="nav__item"><a class="nav__link" href="#">About Us</a></li>
           <li class="nav__item"><a class="nav__link" href="#">Blog</a></li>
@@ -13,8 +13,8 @@
         </ul>
       </section>
       <section class="footer__info">
-        <h3 class="footer__heading">Customer Information</h3>
-        <ul class="infor__list">
+        <h3 class="footer__heading footer__heading_mobile">Customer Information</h3>
+        <ul class="info__list">
           <li class="info__item"><a class="info__link" href="#">Contact Us</a></li>
           <li class="info__item"><a class="info__link" href="#">Sale Exclusions</a></li>
           <li class="info__item"><a class="info__link" href="#">Shipping & Returns</a></li>
@@ -43,22 +43,22 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link" href="https://facebook.com/">
-                <img src="img/icon/facebook.svg" alt="facebook" width="30" height="30">
+                <img class="social__img" src="img/icon/facebook.svg" alt="facebook" width="30" height="30">
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="https://twitter.com/">
-                <img src="img/icon/twitter.svg" alt="twitter" width="30" height="30">
+                <img class="social__img" src="img/icon/twitter.svg" alt="twitter" width="30" height="30">
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="https://ru.pinterest.com/">
-                <img src="img/icon/pinterest.svg" alt="pinterest" width="30" height="30">
+                <img class="social__img" src="img/icon/pinterest.svg" alt="pinterest" width="30" height="30">
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="https://instagram.com/">
-                <img src="img/icon/instagram.svg" alt="instagram" width="30" height="30">
+                <img class="social__img" src="img/icon/instagram.svg" alt="instagram" width="30" height="30">
               </a>
             </li>
           </ul>
@@ -66,10 +66,17 @@
       </div>
     </div>
     <div class="border"></div>
-    <div class="footer__content">  
+    <div class="footer__content footer__content_two">  
       @@include('blocks/rating.html') 
+      
+      <div class="wrap__text">
       <p class="footer__text">Copyright © 2018 Dlk • Design Life Kids</p>
-      <a href="#" class="footer__link">Web Design — Direct Line Development</a>
+    </div>
+      <div class="wrap__link">
+<a href="#" class="footer__link">Web Design — Direct Line Development</a>
+      </div>
+      
+
     </div>
   </div>
 </footer>
