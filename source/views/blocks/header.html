@@ -1,7 +1,6 @@
 <header class="header">
   <div class="container">
       <nav class="header__menu">
-
         <ul class="header__list">
           <li class="header__item">
             <a class="header__link" href="index.html">
@@ -31,11 +30,25 @@
           </li>
         </ul>
         <ul class="header__list_mobile">
-          <li>
-            <a class=" menu-mobile" href="#">Menu</a>
+          <li class="header__item">
+            @@include('blocks/button.html', {
+              "tag": "button",
+              "type": "button",
+              "name": "",
+              "value": "",
+              "button": "",
+              "class": "menu-mobile",
+              "text": "Menu"
+            })
+          </li>
+          <li class="header__item">
+            <button class="menu-mobile__btn" type="button">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.707105 0L0 0.707105L7.07111 7.77821L4.6869e-05 14.8493L0.707151 15.5564L7.77821 8.48532L14.8492 15.5563L15.5563 14.8492L8.48532 7.77821L15.5563 0.707178L14.8492 7.33696e-05L7.77821 7.07111L0.707105 0Z" fill="#1E0606"/>
+                </svg>
+            </button>
           </li>
         </ul>
-            
         
         <ul class="header__list_two">
           <li class="header__item_two">
@@ -48,6 +61,8 @@
           </li>
         </ul>
       </nav>
+      
     </div>
 </header>
+@@include('blocks/header_mobile.html')
 

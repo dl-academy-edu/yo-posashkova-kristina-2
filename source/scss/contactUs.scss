@@ -1,15 +1,25 @@
 .contact-us {
   display: flex;
   margin-bottom: 60px;
-
-  &__content {
-    display: flex;
-    justify-content: space-between;
+  @media screen and (max-width:1140px) {
+    flex-direction: column-reverse;
+    align-items: center;
     margin-bottom: 60px;
-}
+  }
+
   &__wrapper {
-    width: 380px;
+    max-width: 380px;
     margin-left: 120px;
+    @media screen and (max-width:1140px) {
+      margin-left: 0;
+      max-width: 576px;
+      text-align: center;
+      margin-bottom: 45px;
+    }
+    @media screen and (max-width:750px) {
+      max-width: 335px;
+      margin-bottom: 25px;
+    }
   }
 
   &__text {
@@ -26,15 +36,32 @@
 
 .form__content {
   display: inline-block;
-  width: 680px;
+  max-width: 680px;
   background-color: $color-form;
   padding: 42px 40px;
+  @media screen and (max-width:1140px) {
+    max-width: 648px;
+    padding: 42px 56px; 
+  }
+  @media screen and (max-width:750px) {
+    max-width: 335px;
+    padding: 25px 25px; 
+  }
+
 }
 
 .form {
   @include font(14px, 19px, 400);
-  width: 600px;
+  font-family: "Roboto", sans-serif;
+  max-width: 600px;
   display: inline-block;
+  @media screen and (max-width:1140px) {
+    max-width: 536px;
+  }
+  @media screen and (max-width:750px) {
+    max-width: 285px;
+  }
+  
 }
 
 .form input {
@@ -45,7 +72,11 @@
 .wrapp,
 .form__message {
   margin-bottom: 20px;
+  @media screen and (max-width:750px) {
+    margin-bottom: 15px;
+  }
 }
+
 
 .form__checkbox {
   margin-bottom: 13px;
@@ -55,4 +86,52 @@
   @include font(18px, 25px, 400);
   color: $color-text;
   padding-left: 20px;
+  @media screen and (max-width:1140px) {
+    @include font(16px, 19px, 400);
+  }
+  @media screen and (max-width:750px) {
+    @include font(14px, 16px, 400);
+    padding-left: 15px;
+  }
+}
+
+@media screen and (max-width:1140px) {
+  .input__name {
+    max-width: 536px;
+  }
+  .message {
+    max-width: 536px;
+  }
+
+  .input__phone {
+    max-width: 258px;
+  }
+  .input__email {
+    max-width: 258px;
+
+  }
+}
+
+@media screen and (max-width:750px) {
+  .input__name {
+    max-width: 285px;
+    height: 40px;
+  }
+  .message {
+    max-width: 285px;
+  }
+  .input__phone {
+    max-width: 285px;
+    height: 40px;
+  }
+  .input__email {
+    max-width: 285px;
+    height: 40px;
+  }
+  .wrapp {
+    flex-wrap: wrap;
+  }
+  .form__phone {
+    margin-bottom: 15px;
+  }
 }

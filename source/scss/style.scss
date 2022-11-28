@@ -32,6 +32,7 @@
 @import "animation";
 @import "svg";
 @import "grid";
+@import "_blocks/header_mobile";
 
 
 
@@ -302,10 +303,21 @@ margin: 17px 0 0 11px;
 
 .category {
   margin-top: 90px;
+  @media screen and (max-width:1000px) {
+    margin-top: 60px;
+    width: 100%;
+    padding-left: 8%;
+  }
 
   &__wrapper {
     margin-top: 30px;
     max-width: 1180px;
+    @media screen and (max-width:1000px) {
+      margin-top: 24px;
+    }
+    @media screen and (max-width:650px) {
+      margin-top: 20px;
+    }
   }
 
   &__list {
@@ -314,11 +326,11 @@ margin: 17px 0 0 11px;
     text-transform: uppercase;
     font-family: "Montserrat";
     text-align: center;
-    overflow: scroll;
+    overflow: hidden;
     width: 1180px;
     width: 100%;
     max-width: 1180px;
-
+    
 }
 }
 
@@ -335,9 +347,28 @@ margin: 17px 0 0 11px;
   display: flex;
   max-width: 680px;
   margin-top: 33px;
+  @media screen and (max-width:1000px) {
+    margin-top: 27px;
+  }
+  @media screen and (max-width:650px) {
+    margin-top: 20px;
+  }
+
 
   &_text {
     margin-left: 14px;
+      @media screen and (max-width:1000px) {
+        @include font(14px, 19px, 400);
+      }
+      @media screen and (max-width:677px) {
+        max-width: 300px;
+        margin-left: 10px;
+      }
+
+      @media screen and (max-width:440px) {
+        max-width: 247px;
+      }
+    
 }
   &_btn {
     width: 37px;
@@ -346,6 +377,15 @@ margin: 17px 0 0 11px;
     margin-right: 6px;
     background: rgba(112, 187, 220, 0.2);
     padding: 5px 12px 6px 12px;
+
+    @media screen and (max-width:800px) {
+      width: 36px;
+      height: 36px;
+    }
+    @media screen and (max-width:550px) {
+      width: 33px;
+      height: 33px;
+    }
   }
 }
 
@@ -367,9 +407,29 @@ margin: 17px 0 0 11px;
   display: flex;
   margin-top: 90px;
 
+  @media screen and (max-width:1000px) {
+    margin-top: 60px;
+  }
+  @media screen and (max-width:550px) {
+    flex-wrap: wrap;
+    margin-top: 80px;
+    
+  }
   &__content {
     margin-top: 30px;
     margin-left: 120px;
+    @media screen and (max-width:1000px) {
+      margin-left: 56px;
+    }
+    @media screen and (max-width:1000px) {
+      margin-top: 0px;
+      margin-left: 25px;
+    }
+    @media screen and (max-width:550px) {
+      flex-basis: 100%;
+      margin-top: 20px;
+      margin-left: 0;
+    }
 }
   &__heading {
     margin-bottom: 6px;
@@ -382,27 +442,57 @@ margin: 17px 0 0 11px;
     padding-left: 60px;
     padding-top: 11px;
     cursor: pointer;
+
+    @media screen and (max-width:1000px) {
+      @include font(24px, 31px, 700);
+      height: 45px;
+      margin-left:-20px;
+      padding-left: 20px;
+      padding-top: 8px;
+      padding-bottom: 7px;
+      max-width: 267px;
+    }
+
   }
 
   &__wrapper {
     max-width: 326px;
     margin: 0;
     margin-bottom: 22px;
+    @media screen and (max-width:1000px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__btn {
     margin-top: 11px;
+    @media screen and (max-width:1000px) {
+      margin-top: 5px;
+    }
+
+    @media screen and (max-width:1000px) {
+      margin-top: 9px;
+    }
   }
 
   &__description {
     margin-bottom: 15px;
     max-width: 480px;
+    @media screen and (max-width:1000px) {
+      @include font(14px, 19px, 400);
+    }
+    @media screen and (max-width:550px) {
+      margin-bottom: 12px;
+    }
   }
 
   &__wrapper {
     max-width: 326px;
     margin: 0;
     margin-bottom: 22px;
+    @media screen and (max-width:1000px) {
+      margin-bottom: 13px;
+    }
   }
 }
 
@@ -417,6 +507,10 @@ margin: 17px 0 0 11px;
 .company {
   margin-top: 91px;
   margin-bottom: 90px;
+  @media screen and (max-width:1000px) {
+    margin-top: 60px;
+    margin-bottom: 86px;
+  }
 
   &__heading {
   display: none;
@@ -425,28 +519,142 @@ margin: 17px 0 0 11px;
   &__list {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width:550px) {
+      position: relative;
+    }
   }
+
 }
+
+@media screen and (max-width:550px) {
+    .company__item {
+      position: absolute;
+
+      &_mail {
+        left: 15px;
+        top: 63px;
+      }
+      &_apple {
+        right: 15px;
+      }
+      &_eltex {
+        left: 0;
+      }
+      &_owox{
+        right: 0;
+        top: 74px;
+      }
+    }  
+  
+    }
+@media screen and (max-width:1050px) {
+  .company__img {
+    &_mail {
+      width: 88px;
+      height: auto;
+    }
+    &_apple {
+      width: 81px;
+      height: auto;
+    }
+    &_eltex {
+      width: 98px;
+      height: auto;
+    }
+    &_owox{
+      width: 96px;
+      height: auto;
+    }
+  }
+  }
+
+  @media screen and (max-width:550px) {
+    .company__img {
+      &_mail {
+        width: 131px;
+        height: auto;
+      }
+      &_apple {
+        width: 109px;
+        height: auto;
+      }
+      &_eltex {
+        width: 149px;
+        height: auto;
+      }
+      &_owox{
+        width: 143px;
+        height: auto;
+      }
+    }
+    }
+
 
 /* ABOUT COMPANY */
 
 .company-info {
   display: flex;
   margin-bottom: 155px;
+  @media screen and (max-width:1000px) {
+    margin-bottom: 0px;
+  }
+
+  @media screen and (max-width:650px) {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  @media screen and (max-width:376px) {
+    left: 5%;
+  }
+
 }
 
 .about-company {
   position: relative;
+  @media screen and (max-width:650px) {
+    flex-basis: 100%;
+  }
+  @media screen and (max-width:550px) {
+    margin-top: 88px;
+  }
 
   &__heading {
     position: absolute;
     left: 30px;
+
+    @media screen and (max-width:1050px) {
+      @include font (30px, 37px, 700);
+      white-space: nowrap;
+      left: 15px;
+    }
+    @media screen and (max-width: 750px) {
+      @include font (24px, 29px, 700);
+      white-space: nowrap;
+      left: 15px;
+    }
+    @media screen and (max-width:650px) {
+      left: 8%;
+    }
+    @media screen and (max-width:376px) {
+      left: 5%;
+    }
 }
 
   &__content {
     background: $color-bg;
     margin-top: 21px;
     padding: 31px 30px 27px 30px;
+    @media screen and (max-width:1000px) {
+      margin-top: 15px;
+      padding: 33px 30px 35px 15px;
+    }
+    @media screen and (max-width:650px) {
+      padding-left: 8%;
+    }
+    @media screen and (max-width:376px) {
+      padding-left: 5%;
+    }
   }
 
   &__subtitle {
@@ -455,6 +663,10 @@ margin: 17px 0 0 11px;
 
   &__text {
     max-width: 483px;
+    @media screen and (max-width: 750px) {
+      @include font (14px, 19px, 400);
+    }
+
 }
 
   &__btn {
@@ -462,26 +674,83 @@ margin: 17px 0 0 11px;
 }
 }
 
+
 .contacts-company {
   position: relative;
   margin-left: 57px;
+  @media screen and (max-width:1000px) {
+    margin-left: 20px;
+  }
+  @media screen and (max-width:650px) {
+    flex-basis: 100%;
+    margin-left: 0;
+    margin-top: 35px;
+  }
+
 
   &__content {
     background: $color-bg;
     margin-top: 21px;
     padding: 41px 30px 102px 30px;
+    @media screen and (max-width:1000px) {
+      margin-top: 15px;
+      padding: 33px 30px 99px 15px;
+    }
+    @media screen and (max-width:650px) {
+      padding-left: 8%;
+    }
+    @media screen and (max-width:376px) {
+      padding-left: 5%;
+    }
 }
   &__heading {
     position: absolute;
     left: 30px;
+
+    @media screen and (max-width:1050px) {
+      @include font (30px, 37px, 700);
+      white-space: nowrap;
+      left: 15px;
+    }
+    @media screen and (max-width: 750px) {
+      @include font (24px, 29px, 700);
+      white-space: nowrap;
+      left: 15px;
+    }
+    @media screen and (max-width:650px) {
+      left: 8%;
+    }
+    @media screen and (max-width:376px) {
+      left: 5%;
+    }
   }
 
   &__text {
     max-width: 483px;
+
+    @media screen and (max-width: 750px) {
+      @include font (14px, 19px, 400);
+    }
 }
 
   &__map {
-    position: absolute;
-    margin-top: 30px;
+    position: relative;
+    overflow:hidden;
+    top: -80px;
+    left: 30px;
+    max-width: 483px;
+    @media screen and (max-width:800px) {
+      left: 15px;
+      max-width: 284px;
+    }  
+    @media screen and (max-width:650px) {
+      left: 8%;
+      max-width: 335px;
+    }
+    @media screen and (max-width:376px) {
+      left: 5%;
+      max-width: 335px;
+    }
+  }
 }
-}
+

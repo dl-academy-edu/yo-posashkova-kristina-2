@@ -7,8 +7,8 @@
   <meta name="google" content="notranslate">
   <meta name="format-detection" content="telephone=no">
 
-  <title>DL Academy</title>
-  <meta name="description" content="">
+  <title>DL Academy Проект учебный Верстка Тольятти</title>
+  <meta name="description" content="Верстку выполнил студент самостоятельно с помощью технологий HTML, SCSS, JS, GULP">
   <meta name="keywords" content="">
   <script>
     var docElement = document.documentElement;
@@ -58,6 +58,7 @@
             "type": "button",
             "name": "",
             "value": "",
+            "button": "button",
             "class": "banner__js",
             "text": "Explore now"
           })
@@ -88,7 +89,8 @@
               "link": "#",
               "class": "",
               "text": "Apparel kids",
-              "img": "./img/apparelKids.jpg"
+              "img": "./img/apparelKids.jpg",
+              "alt": "apparel kids"
             })
           </li>
           <li>
@@ -96,7 +98,8 @@
               "link": "#",
               "class": "",
               "text": "Holiday Shop",
-              "img": "./img/holidayShop.jpg"
+              "img": "./img/holidayShop.jpg",
+              "alt": "holiday shop"
             })
           </li>
           <li>
@@ -104,7 +107,8 @@
               "link": "./toys.html",
               "class": "",
               "text": "Toys",
-              "img": "./img/toys.jpg"
+              "img": "./img/toys.jpg",
+              "alt": "toys"
             })
           </li>
           <li>
@@ -112,7 +116,8 @@
               "link": "",
               "class": "",
               "text": "Accessories",
-              "img": "./img/accessories.jpg"
+              "img": "./img/accessories.jpg",
+              "alt": "accessories"
             })
           </li>
           <li>
@@ -120,7 +125,8 @@
               "link": "",
               "class": "",
               "text": "Apparel adults",
-              "img": "./img/apparelAdults.jpg"
+              "img": "./img/apparelAdults.jpg",
+              "alt": "apparel adults"
             })
           </li>
           <li>
@@ -128,7 +134,8 @@
               "link": "",
               "class": "",
               "text": "Sale",
-              "img": "./img/sale.jpg"
+              "img": "./img/sale.jpg",
+              "alt": "sale"
             })
           </li>
         </ul>
@@ -148,7 +155,13 @@
       </div>
     </section>
     <section class="delivery container">
-      <img class="delivery__img" src="img/woman.jpg" alt="woman" width="480" height="559">
+      <picture class="delivery__img">
+        <source srcset="img/woman-mobile.jpg, img/woman-mobile2x.jpg 2x " media="(max-width:550px)" >
+        <source srcset="img/woman-tablet.jpg, img/woman-tablet2x.jpg 2x" media="(max-width: 1000px)">
+        <source srcset="img/woman.jpg, img/woman2x.jpg 2x" media="(max-width: 1400px)">
+        <img src="img/woman.jpg" alt="woman">
+      </picture>
+      
       <div class="delivery__content">
         <h2 class="delivery__heading title_two">Delivery</h2>
         <div class="delivery__wrapper">
@@ -169,6 +182,7 @@
         @@include('blocks/button.html', {
           "tag": "a",
           "type": "button",
+          "button": "button",
           "class": "delivery__btn",
           "name": "",
           "value": "",
@@ -178,12 +192,14 @@
     </section>
     <section class="company container">
       <h2 class="company__heading title_two">Company</h2>
+      <div>
       <ul class="company__list">
-        <li class="company__item"><img class="company__img" src="img/mail.png" alt="mail" width="193" height="60"></li>
-        <li class="company__item"><img class="company__img" src="img/apple.png" alt="apple" width="179" height="61"></li>
-        <li class="company__item"><img class="company__img" src="img/eltex.png" alt="eltex" width="216" height="46"></li>
-        <li class="company__item"><img class="company__img" src="img/owox.png" alt="owox" width="211" height="40"></li>
+        <li class="company__item company__item_mail"><img class="company__img company__img_mail" src="img/mail.png" alt="mail" width="193" height="60"></li>
+        <li class="company__item company__item_apple"><img class="company__img company__img_apple" src="img/apple.png" alt="apple" width="179" height="61"></li>
+        <li class="company__item company__item_eltex"><img class="company__img company__img_eltex" src="img/eltex.png" alt="eltex" width="216" height="46"></li>
+        <li class="company__item company__item_owox"><img class="company__img company__img_owox" src="img/owox.png" alt="owox" width="211" height="40"></li>
       </ul>
+    </div>
     </section>
     <section class="company-info container">
       <div class="about-company">
@@ -196,6 +212,7 @@
           @@include('blocks/button.html', {
             "tag": "a",
             "type": "button",
+            "button": "button",
             "class": "about-company__btn",
             "name": "",
             "value": "",
@@ -211,11 +228,16 @@
             there are other days that i am completely shocked that four years have
             flown by. It's simply magical.
           </p>
-          <map class="contacts-company__map" name="map"><iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.537150624947!2d49.28814991584469!3d53.51246308001423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416879a82611632d%3A0xb18d94ffcf91e387!2zREwgQWNhZGVteSDigJQg0LrRg9GA0YHRiyDQv9GA0L7Qs9GA0LDQvNC80LjRgNC-0LLQsNC90LjRjw!5e0!3m2!1sru!2sru!4v1661175509935!5m2!1sru!2sru"
-              width="483" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe></map>
         </div>
+        <div class="contacts-company__map">
+            <map class="contacts-company__map_iframe" name="map">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.537150624947!2d49.28814991584469!3d53.51246308001423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416879a82611632d%3A0xb18d94ffcf91e387!2zREwgQWNhZGVteSDigJQg0LrRg9GA0YHRiyDQv9GA0L7Qs9GA0LDQvNC80LjRgNC-0LLQsNC90LjRjw!5e0!3m2!1sru!2sru!4v1661175509935!5m2!1sru!2sru"
+                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </map>
+          </div>
       </div>
     </section>
   </main>

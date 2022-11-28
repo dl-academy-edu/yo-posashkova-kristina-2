@@ -13,10 +13,33 @@ const inputMail = document.querySelector('.input__email')
 const inputPhone = document.querySelector('.input__phone')
 const inputMessage = document.querySelector('.message')
 
+const menuMobile = document.querySelector('.header-mobile')
+const menuBtn = document.querySelector('.menu-mobile')
+const menuClose = document.querySelector('.menu-mobile__btn')
+
+
+let stateModal = false
+
+menuBtn.addEventListener('click', () => {
+        menuMobile.classList.add('header-mobile__open')
+        menuBtn.classList.add('menu-mobile__none')
+        menuClose.classList.add('menu-mobile__btn_on')
+})
+
+menuClose.addEventListener ('click', () => {
+    menuClose.classList.remove('menu-mobile__btn_on')
+    menuBtn.classList.remove('menu-mobile__none')
+    menuMobile.classList.remove('header-mobile__open')
+})
+
+
+
+
 popupBtn.addEventListener('click', () => {
     submit.setAttribute('disabled', 'true')
     popup.classList.add('popup__open')
 })
+
 
 checkbox.addEventListener('input', () => {
     if (checkbox.checked) {
@@ -53,3 +76,4 @@ const closePopup = () => {
     checkbox.checked = false
     submit.setAttribute('disabled', 'true')
 }
+

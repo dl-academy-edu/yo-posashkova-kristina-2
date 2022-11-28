@@ -7,10 +7,21 @@
   }
 
   &__form {
-    width: 1095px;
+    max-width: 1095px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 42px 0 42px 0;
+
+    @media screen and (max-width:769px) {
+      max-width: 574px;
+    }
+    @media screen and (max-width:550px) {
+      @include font (14px, 19px, 400)
+    }
+    @media screen and (max-width:465px) {
+      max-width: 300px;
+    }
   }
 
   &__fieldset {
@@ -24,22 +35,51 @@
   &__legend {
     font-weight: 700;
     padding-bottom: 15px;
+    @media screen and (max-width:550px) {
+      @include font (14px, 19px, 700)
+    }
   }
 
   &__cost {
     margin-right: 94px;
+    @media screen and (max-width:840px) {
+      margin-right: 20px;
+    }
   }
   
   &__color {
     margin-right: 124px;
+    @media screen and (max-width:840px) {
+      margin-right: 20px;
+    }
+    @media screen and (max-width:465px) {
+      margin-top: 25px;
+    }
   }
 
   &__delivery {
     margin-right: 69px;
+    @media screen and (max-width:840px) {
+      margin-right: 0;
+    }
+    @media screen and (max-width:550px) {
+      margin-right: 20px;
+      margin-top: 27px;
+    }
+    @media screen and (max-width:465px) {
+      margin-top: 25px;
+    }
   }
 
   &__amount {
     margin-right: 58px;
+    @media screen and (max-width:840px) {
+      margin-top: 23px;
+    }
+    @media screen and (max-width:550px) {
+      margin-right: 0;
+      margin-top: 27px;
+    }
   }
 }
 
@@ -173,6 +213,18 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 
 .apply {
   margin-top: 37px;
+  @media screen and (max-width:1189px) {
+    margin-right: 104px;
+  }
+  @media screen and (max-width:840px) {
+    margin-top: 57px;
+    margin-right: 30px;
+  }
+  @media screen and (max-width:465px) {
+    margin-top: 25px;
+    margin-left: 120px;
+  }
+
 }
 
 /* TOYS */
@@ -180,6 +232,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 .toys {
   margin-top: 60px;
   margin-bottom: 36px;
+  width: 100%;
 
   &__heading {
     display: none;
@@ -189,5 +242,9 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     display: flex;
     flex-wrap: wrap;
     text-transform: uppercase;
+    justify-content: center;
+    @media screen and (max-width:700px) {
+      max-width: 648px;
+    }
   }
 }

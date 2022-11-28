@@ -1,5 +1,9 @@
 .posts {
   margin-bottom: 20px;
+  width: 100%;
+  @media screen and (max-width:720px) {
+    width: 84%;
+  }
 }
 
 .posts__heading {
@@ -9,5 +13,5 @@
 .posts__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }

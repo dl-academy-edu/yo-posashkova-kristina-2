@@ -66,9 +66,11 @@
             </div>
 
             <div class="box-3">
-              <img class="box-3__img" src="./img/keyboard.png" alt="keyboard" width="314" height="164">
-              <p class="box-3__text" >Our Brand New Keyboard</p>
-              <a class="box-3__link" href="#">Learn</a>
+              <div class="box-3__content">
+                <img class="box-3__img" src="./img/keyboard.png" alt="keyboard" width="314" height="164">
+                <p class="box-3__text" >Our Brand New Keyboard</p>
+                <a class="box-3__link" href="#">Learn</a>
+              </div>
             </div>
 
             <div class="box-4">
@@ -78,7 +80,12 @@
                     <p class="box-4__title">Imac.Retina</p>
                     <p class="box-4__text">Hardly a month passes these days where</p>
                   </div>
-                  <img class="box-4__img" src="./img/imac.png" alt="imac" width="352" height="164">
+                  <picture class="box-4__img">
+                    <source srcset="./img/imac-mobile.png, ./img/imac-mobile2x.png 2x" media="(max-width:550px)">
+                    <source srcset="./img/imac-tablet.png, ./img/imac-tablet2x.png 2x" media="(max-width: 770px)">
+                    <source srcset="./img/imac.png, ./img/imac2x.png 2x" media="(max-width: 1400px)">
+                    <img src="./img/imac.png" alt="imac" >
+                  </picture>
                 </div>
                 <div class="box-4__wrapper_2">
                   <p class="box-4__description">Apple may be experimenting in the virtual reality space. The company has been granted a patent for a head-mounted virtual reality device that would use the iPhone screen as the display.</p>
@@ -89,25 +96,34 @@
             </div>
 
             <div class="box-5">
-              <img class="box-5__img" src="./img/icloud.png" alt="icloud"  width="300" height="300">
-              <p class="box-5__title">iCloud</p>
-              <p class="box-5__text">With iCloud, you always have the latest versions of your most important things — like documents, apps, notes, and contacts — on whatever device you’re using.</p>
-              <a class="box-5__link" href="#">Learn more</a>
+              <div class="box-5__content">
+                <img class="box-5__img" src="./img/icloud.png" alt="icloud"  width="300" height="300">
+                <p class="box-5__title">iCloud</p>
+                <p class="box-5__text">With iCloud, you always have the latest versions of your most important things — like documents, apps, notes, and contacts — on whatever device you’re using.</p>
+                <a class="box-5__link" href="#">Learn more</a>
+              </div>
             </div>
 
             <div class="box-6">
               <a class="box-6__text">Best choice</a>
               <div class="box-6__content">
                 <p class="box-6__description">Much MuchBetter Experience</p>
-                <img class="box-6__img" src="./img/notebook.png" alt="notebook" width="700" height="275">
+                <picture class="box-6__img">
+                  <source srcset="./img/notebook-mobile.png, ./img/notebook-mobile2x.png 2x" media="(max-width:730px)">
+                  <source srcset="./img/notebook-tablet.png, ./img/notebook-tablet2x.png 2x" media="(max-width: 1000px)">
+                  <source srcset="./img/notebook.png, ./img/notebook2x.png 2x" media="(max-width: 1400px)">
+                  <img src="./img/notebook.png" alt="notebook">
+                </picture>
               </div>
               
             </div>
 
             <div class="box-7">
-              <img class="box-7__img" src="./img/games.png" alt="games" width="303" height="167">
-              <p class="box-7__title">Games ourpasion</p>
-              <a class="box-7__link" href="#">Learn ></a>
+              <div class="box-7__content">
+                <img class="box-7__img" src="./img/games.png" alt="games" width="303" height="167">
+                <p class="box-7__title">Games ourpasion</p>
+                <a class="box-7__link" href="#">Learn ></a>
+              </div>
             </div>
 
             <div class="box-8">
@@ -116,12 +132,19 @@
             </div>
 
             <div class="box-9">
-              <img class="box-9__img" src="./img/tv.png" alt="tv" width="271" height="215">
-              <p class="box-9__text">More than just a display,  it’s a vision</p>
+              <div class="box-9_content">
+                <picture class="box-9__img">
+                  <source srcset="./img/tv-mobile.png, ./img/tv-mobile2x.png 2x" media="(max-width:600px)">
+                  <source srcset="./img/tv.png, ../img/tv2x.png 2x" media="(max-width: 1400px)">
+                  <img src="./img/tv.png" alt="tv">
+                </picture>
+                <p class="box-9__text">More than just a display,  it’s a vision</p>
+              </div>
             </div>
         
     </section>      
   </main>
 @@include('blocks/footer.html')
+<script src="js/app.js"></script>
 </body>
 </html>
