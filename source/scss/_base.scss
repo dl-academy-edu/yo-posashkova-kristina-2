@@ -30,12 +30,24 @@ h3 {
 .title_two {
   font-size: 38px;
   line-height: 46px;
+
+  @media screen and (max-width: 800px) {
+    @include font(36px, 44px, 700);
+  }
+
+  @media screen and (max-width: 657px) {
+    @include font(24px, 29px, 700);
+  }
+
 }
 
 .subtitle {
   @include font(20px, 26px, 400);
   font-family: "Crimson Text", sans-serif;
   font-style: italic;
+  @media screen and (max-width:650px) {
+    @include font(16px, 21px, 400);
+  }
 }
 
 .subtitle_two {
@@ -119,6 +131,15 @@ button {
 }
 
 /* breadcrumbs__list */
+
+.breadcrumbs__heading {
+  @media screen and (max-width:1000px) {
+    @include font(36px, 44px, 700);
+  }
+  @media screen and (max-width:650px) {
+    @include font(24px, 29px, 700);
+  }
+}
 
 .breadcrumbs__list {
   margin: 20px 0 50px 0;

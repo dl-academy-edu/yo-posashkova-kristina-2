@@ -1,6 +1,6 @@
 .animation {
   position: relative;
-  width: 1400px;
+  max-width: 1400px;
   margin: auto;
 
     &__content {
@@ -14,26 +14,36 @@
     }
 
     &__clouds {
-    width: 1342px;
-    height: 135px;
-    margin-left: 80px;
+      max-height: 135px;
+      margin-left: 80px;
+      max-width: 1342px;
+      width: 100%;
+      height: auto;
+      @media screen and (max-width:1300px) {
+        margin-left: 0%;
+      }
     }
 
     &__town {
-      width: 1585px;
-      height: 358px;
-      margin-left: -95px;
+      max-width: 1585px;
+      max-height: 358px;
+      width: 100%;
+      height: auto;
+      @media screen and (max-width:1300px) {
+
+      }
     }
 
     &__road_one {
-      margin-left: -77px;
+      width: 100%;
+      height: auto;
     }
 
     &__cars {
       z-index: 7;
       position: absolute;
       left: -38px;
-      top: 460px;
+      top: 400px;
       width: 1500px;
       height: 125px;
       flex-wrap: nowrap;
@@ -73,31 +83,40 @@
       display: flex;
       justify-content: space-between;
       position: absolute;
-      top: 215px;
+      top: 180px;
       right: -50px;
       z-index: 8;
     }
 
     &__road_two {
       margin-top: 43px;
-      margin-left: -77px;
+      width: 100%;
+      height: auto;
+      @media screen and (max-width:800px) {
+        margin-top: 22px;
+      }
+      @media screen and (max-width:400px) {
+        margin-top: 8px;
+      }
     }
 
     &__footway {
-      margin-left: -100px;
+      width: 100%;
+      max-width: 1400px;
+      height: auto;
     }
 
     &__lantern {
       position: absolute;
-      top: 210px;
-      right: 186px;
+      top: 161px;
+      right: 200px;
       z-index: 12;
     }
 
     &__suitcases {
       position: absolute;
-      top: 686px;
-      right: 1036px;
+      top: 630px;
+      right: 987px;
       z-index: 18;
     }
 }
@@ -106,7 +125,7 @@
 .taxi {
   position: absolute;
   right: -15px;
-  top: 440px;
+  top: 375px;
   z-index: 10;
   opacity: 0;
   animation: taxi 9s cubic-bezier(0,0.8,0.7,0) 4s;
@@ -136,8 +155,8 @@
 
 .man {
   position: absolute;
-  right: 904px;
-  top: 381px;
+  right: 850px;
+  top: 325px;
   z-index: 17; 
 
   &__message {
@@ -191,8 +210,8 @@
 
 .woman {
   position: absolute;
-  right: 1119px;
-  top: 514px;
+  right: 1075px;
+  top: 458px;
   z-index: 11;
   
   &__message {

@@ -55,6 +55,23 @@
 }
 }
 
+  .menu-mobile {
+
+    &__none {
+      display: none;
+    }
+
+    &__btn {
+      display: none;
+    }
+
+    &__btn_on {
+      display: block;
+      background: none;
+    }
+  }
+
+
 
 
   @media screen and (max-width:1000px) {
@@ -65,14 +82,16 @@
       .header__list_mobile {
         display: flex;
         align-items: center;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 19px;
-        display: flex;
       }
-      
+
       .header__item:first-child {
         margin-right: 0;
+      }
+
+      .menu-mobile {
+        @include font(14px, 19px, 400);
+        text-transform: uppercase;
+        background: none;
       }
     }
 
@@ -92,6 +111,7 @@
         width: 42px;
         height: 22px;
       }
+      
       .header__search {
         width: 12px;
         height: 13px;

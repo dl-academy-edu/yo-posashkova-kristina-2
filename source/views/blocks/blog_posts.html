@@ -1,8 +1,11 @@
-<li class="posts__item">
-<img class="posts__img" src="@@img" alt="@@alt" width="380" height="220">
-<p class="posts__data">@@data</p>
-<a class="posts__link" href="@@link">
-  <h3 class="posts__name">@@title</h3>
-</a>
-<p class="posts__text">@@text</p>
-</li>
+  <picture class="posts__img">
+    <source srcset="@@srcset-mobile" media="(max-width:720px)" width="335" height="194"  >
+    <source srcset="@@srcset-tablet" media="(max-width: 955px)" width="314" height="182">
+    <source srcset="@@srcset" media="(max-width: 1400px)" width="380" height="220">
+    <img  src="@@img" alt="@@alt" >
+  </picture>
+  <p class="posts__data">@@data</p>
+  <a class="posts__link" href="@@link">
+    <h3 class="posts__name">@@title</h3>
+  </a>
+  <p class="posts__text">@@text</p>

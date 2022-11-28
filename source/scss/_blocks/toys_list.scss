@@ -3,13 +3,18 @@
     position: relative;
     align-items: center;
     text-align: center;
-    width: 380px;
+    max-width: 380px;
     margin-bottom: 20px;
-  }
-  
-  .toys__item:not(:nth-child(3n)) {
     margin-right: 20px;
   }
+
+  .toys__item:nth-child(3n) {
+    margin-right: 0;
+    @media screen and (max-width:700px) {
+      margin-right: 20px;
+    }
+  }
+  
   
   .toys__link {
     @include font(26px, 29px, 700);
@@ -26,6 +31,14 @@
     text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
     background-color: $color-form;
     opacity: 0;
+    @media screen and (max-width:805px) {
+      @include font(20px, 22px, 700);
+      height: 175px;
+      left: 14px;
+      padding-top: 77px;
+      top: 40px;
+      width: 180px;
+    }
   }
   
   .toys__link:hover {
@@ -38,15 +51,39 @@
   
   .toys__img {
     margin-bottom: 25px;
+    @media screen and (max-width:805px) {
+      width: 203px;
+      height: 211px;
+    }
+    @media screen and (max-width:470px) {
+      width: 160px;
+      height: 167px;
+    }
   }
   
   .toys__name {
     @include font(14px, 19px, 400);
     margin-bottom: 15px;
+    @media screen and (max-width:805px) {
+      @include font(12px, 16px, 400);
+      margin-bottom: 5px;
+    }
+    @media screen and (max-width:470px) {
+      margin-bottom: 5px;
+      white-space: wrap;
+      max-width: 159px;
+    }
   }
   
   .price {
     font-weight: 700;
     margin-bottom: 25px;
+    @media screen and (max-width:805px) {
+      @include font(14px, 19px, 700);
+      margin-bottom: 20px;
+    }
+    @media screen and (max-width:470px) {
+      @include font(12px, 16px, 700);
+    }
   
   }

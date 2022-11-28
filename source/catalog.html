@@ -43,54 +43,58 @@
     <section class="products container">
           <h2 class="title_two">Category Products</h2>
           <div class="category__wrapper">
-            <ul class="category__list">
+            <ul class="category__list_catalog category__list">
               <li>
                 @@include('blocks/category_list.html', {
+                  "item-catalog": "category__item_catalog",
                   "link": "#",
-                  "class": "",
                   "text": "Apparel kids",
+                  "img-catalog": "category__img_catalog",
                   "img": "./img/apparelKids.jpg"
                 })
               </li>
               <li>
                 @@include('blocks/category_list.html', {
+                  "item-catalog": "category__item_catalog",
                   "link": "#",
-                  "class": "",
                   "text": "Holiday Shop",
+                  "img-catalog": "category__img_catalog",
                   "img": "./img/holidayShop.jpg"
                 })
               </li>
               <li>
                 @@include('blocks/category_list.html', {
+                  "item-catalog": "category__item_catalog",
                   "link": "../../toys.html",
-                  "class": "",
                   "text": "Toys",
+                  "img-catalog": "category__img_catalog",
                   "img": "./img/toys.jpg"
                 })
               </li>
-            </ul>
-            <ul class="category__list_two">
               <li>
                 @@include('blocks/category_list.html', {
+                  "item-catalog": "category__item_catalog",
                   "link": "#",
-                  "class": "category__item_two",
                   "text": "Accessories",
+                  "img-catalog": "category__img_catalog",
                   "img": "./img/accessories.jpg"
                 })
               </li>
               <li>
                 @@include('blocks/category_list.html', {
+                  "item-catalog": "category__item_catalog",
                   "link": "#",
-                  "class": "category__item_two",
                   "text": "Apparel adults",
+                  "img-catalog": "category__img_catalog",
                   "img": "./img/apparelAdults.jpg"
                 })
               </li>
               <li>
                 @@include('blocks/category_list.html', {
+                  "item-catalog": "category__item_catalog",
                   "link": "#",
-                  "class": "category__item_two",
                   "text": "Sale",
+                  "img-catalog": "category__img_catalog",
                   "img": "./img/sale.jpg"
                 })
               </li>
@@ -112,5 +116,6 @@
     </section>
   </main>
 @@include('blocks/footer.html')
+<script src="js/app.js"></script>
 </body>
 </html>

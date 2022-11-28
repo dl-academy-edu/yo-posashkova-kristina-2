@@ -9,6 +9,11 @@
   color: #ffffff;
   background: #000000;
   padding: 9px 22px;
+
+  @media screen and (max-width:550px) {
+    padding: 8px 20px;
+    @include font(14px, 19px, 700);
+  }
 }
 
 .button:hover {
