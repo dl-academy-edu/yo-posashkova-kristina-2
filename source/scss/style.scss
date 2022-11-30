@@ -738,8 +738,9 @@ margin: 17px 0 0 11px;
     overflow:hidden;
     top: -80px;
     left: 30px;
-    max-width: 483px;
-    @media screen and (max-width:800px) {
+    max-width: 483px; 
+    width: 100%;
+    @media screen and (max-width:1000px) {
       left: 15px;
       max-width: 284px;
     }  
